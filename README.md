@@ -113,7 +113,7 @@ erDiagram
 
 ## 💰 Temuan Bisnis Finansial Manajemen (Executive Discoveries)
 
-Berdasarkan pengujian terhadap **609.769 baris data riil tahun 2024**, kami memetakan temuan finansial strategis:
+Berdasarkan pengujian terhadap **609.769 baris data riil tahun 2024**, analisis data ini memetakan temuan finansial strategis:
 
 | Dimensi Masalah Bisnis | Temuan Database Riil | Tindakan Strategis Manajemen | Dokumen Rujukan |
 | :--- | :--- | :--- | :--- |

@@ -21,7 +21,7 @@
 > 
 > Laporan ini membuktikan masalah tersebut dengan data pasti dan memberikan solusi konkret untuk menyelamatkan laba bersih perusahaan.
 
-Sepanjang tahun buku 2024, jaringan ritel omnichannel di wilayah Jabodetabek memproses ratusan ribu transaksi lintas 4 kanal belanja (In-Store POS, Mobile App, Website, dan Quick Commerce Instant). Melalui audit forensik berbasis data operasional granular, kami mengungkap **The Omnichannel Paradox**: di balik pertumbuhan omzet top-line yang agresif, perusahaan mengalami **kebocoran kas dan marjin senilai total Rp 3,53 Miliar** akibat inefisiensi rak dan kelonggaran penegakan kontrak rantai pasok.
+Sepanjang tahun buku 2024, jaringan ritel omnichannel di wilayah Jabodetabek memproses ratusan ribu transaksi lintas 4 kanal belanja (In-Store POS, Mobile App, Website, dan Quick Commerce Instant). Melalui audit forensik berbasis data operasional granular, audit ini mengungkap **The Omnichannel Paradox**: di balik pertumbuhan omzet top-line yang agresif, perusahaan mengalami **kebocoran kas dan marjin senilai total Rp 3,53 Miliar** akibat inefisiensi rak dan kelonggaran penegakan kontrak rantai pasok.
 
 ```
 ========================================================================================

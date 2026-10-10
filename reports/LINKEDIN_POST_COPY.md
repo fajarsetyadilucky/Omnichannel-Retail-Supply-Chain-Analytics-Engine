@@ -1,5 +1,5 @@
 Banyak retail terjebak pada ilusi penjualan: "GMV bertumbuh 22%, bisnis tampak sehat."
-Namun saat data transaksi 50 cabang dan 3 gudang regional diaudit forensik, kami mengidentifikasi potensi kebocoran margin mencapai Rp 18,3 Miliar per tahun.
+Namun saat data transaksi 50 cabang dan 3 gudang regional diaudit forensik, analisis ini mengidentifikasi potensi kebocoran margin mencapai Rp 18,3 Miliar per tahun.
 
 Sebagai Data Analyst & Business Intelligence, data bukan sekadar grafik visual di layar dashboard—melainkan katalisator pengambilan keputusan direksi: MENGAPA inefisiensi terjadi, DI MANA titik kebocorannya, dan BAGAIMANA memulihkannya secara berimbang tanpa merusak operasi bisnis.
 
@@ -9,7 +9,7 @@ Berikut 4 temuan kritis hasil audit data forensik:
 
 1️⃣ Membasmi "Ghost Stockout" (Phantom Inventory) — Mitigasi Lost Sales Rp 5,7 Miliar:
 Sistem mencatat stok barang tersedia, namun fisik di rak toko kosong. Akibatnya 6,8% pesanan online dibatalkan sepihak dan mengecewakan pelanggan.
-Menggunakan Window Function LAG() dan discrepancy tracking, kami mendeteksi anomali selisih stok secara otomatis dan menerbitkan prioritas audit fisik harian ke staf gudang, menekan pembatalan pesanan hingga 0,4%.
+Menggunakan Window Function LAG() dan discrepancy tracking, model analitik ini mendeteksi anomali selisih stok secara otomatis dan menerbitkan prioritas audit fisik harian ke staf gudang, menekan pembatalan pesanan hingga 0,4%.
 
 2️⃣ Audit Kepatuhan & SLA Dispute Trail Vendor — Rekonsiliasi Rp 3,2 Miliar:
 Keterlambatan pengiriman vendor kerap membuat rak toko kosong saat akhir pekan, namun denda kontrak luput ditagihkan karena kesulitan rekonsiliasi manual.

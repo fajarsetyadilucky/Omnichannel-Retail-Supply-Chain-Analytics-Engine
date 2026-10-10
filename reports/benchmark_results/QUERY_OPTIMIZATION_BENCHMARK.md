@@ -12,7 +12,7 @@
 
 Dalam arsitektur database transaksi ritel omnichannel skala besar, performa kueri analitik berdampak langsung pada kestabilan operasional (*production uptime*). Kueri analitik yang lambat tidak hanya memperlambat loading dashboard Manajemen, tetapi juga memicu perebutan kunci memori (*lock contention*) yang dapat mendegradasi transaksi kasir POS kasir toko real-time.
 
-Melalui penerapan strategi **Composite B-Tree Indexes, Partial Indexes, BRIN (Block Range Index), Declarative Range Partitioning, dan Materialized Views with Concurrent Refresh**, kami mencatat lonjakan performa sistem yang dramatis:
+Melalui penerapan strategi **Composite B-Tree Indexes, Partial Indexes, BRIN (Block Range Index), Declarative Range Partitioning, dan Materialized Views with Concurrent Refresh**, pengujian benchmark ini mencatat lonjakan performa sistem yang dramatis:
 
 ```
 ========================================================================================
