@@ -1597,50 +1597,49 @@ if browser_bin:
                 slide_html.unlink()
             print(f"  Slide {i:02d} PNG: {slide_png.name} (Exists: {slide_png.exists()})")
 
-# Enterprise-Ready Post Copy
-post_copy = f"""Banyak ritel terjebak pada ilusi pertumbuhan omzet: "GMV naik 22%, bisnis sedang baik-baik saja."
+# Enterprise-Ready Post Copy (Goldilocks Edition: Punchy, Scannable & High-Converting)
+post_copy = f"""GMV tumbuh 22%, tapi mengapa kas perusahaan justru bocor Rp 18,3 Miliar?
 
-Namun saat data transaksi 50 cabang dan 3 gudang regional diaudit forensik, analisis ini mengungkap paradoks besar: di balik omzet ratusan miliar, terdapat potensi kebocoran margin senilai Rp 18,3 Miliar per tahun.
+Banyak bisnis ritel terjebak ilusi angka penjualan yang tampak hijau di permukaan.
 
-Sebagai Data Analyst & Business Intelligence, data bukan sekadar grafik visual di dashboard—melainkan instrumen diagnosis strategis: MENGAPA kebocoran terjadi, DI MANA titik inefisiensinya, dan BAGAIMANA merumuskan intervensi bisnis yang berimbang tanpa melumpuhkan operasional harian.
+Saat data transaksi 50 cabang dan 3 gudang regional diaudit forensik menggunakan PostgreSQL, saya menemukan "The Omnichannel Paradox": di balik omzet ratusan miliar, margin tergerus dari 4 celah yang luput dari radar manajemen.
 
-Dalam studi kasus ini, seluruh mesin audit dirancang 100% menggunakan PostgreSQL 15+ Enterprise Engine sebagai fondasi arsitektur analitik produksi.
+4 Kebocoran Kritis yang Terbongkar:
 
-Berikut 4 temuan kritis hasil audit data forensik:
+1️⃣ Phantom Inventory (Lost Sales Rp 5,7 Miliar)
+Data mencatat barang ada, tapi rak fisik kosong sehingga 6,8% order online batal sepihak.
+↳ Solusi: Query Window Function LAG() untuk mendeteksi anomali selisih stok secara otomatis dan mengarahkan prioritas audit harian staf toko (dibedah di Slide 4).
 
-1️⃣ Membasmi "Ghost Stockout" (Phantom Inventory) — Mitigasi Kerugian Penjualan Rp 5,7 Miliar:
-Sistem mencatat stok tersedia, namun fisik di rak toko kosong. Dampaknya: 6,8% pesanan online dibatalkan sepihak dan merusak kepuasan pelanggan.
-Menggunakan Window Function LAG() dan pelacakan diskrepansi, model analitik ini mendeteksi anomali selisih stok secara otomatis dan menerbitkan prioritas audit fisik harian ke staf gudang, berhasil menekan pembatalan pesanan hingga 0,4%.
+2️⃣ Kebocoran SLA Vendor (Piutang Denda Rp 3,2 Miliar)
+Pasokan sering terlambat di akhir pekan, namun denda kontrak luput ditagih ke prinsipal FMCG.
+↳ Solusi: Skema Tiered Grace-Period sebagai alat bukti sah rekonsiliasi faktur Finance & Vendor tanpa perselisihan sepihak (Slide 5).
 
-2️⃣ Audit Kepatuhan & SLA Dispute Trail Vendor FMCG — Rekonsiliasi Piutang Denda Rp 3,2 Miliar:
-Keterlambatan pasokan vendor kerap memicu kekosongan rak di akhir pekan, namun denda kontrak luput ditagihkan akibat kerumitan rekonsiliasi manual.
-Dengan skema Tiered Grace-Period (toleransi <24 jam, denda terukur >48 jam), query analitik menyajikan alat bukti sah (SLA Dispute Audit Trail) untuk rekonsiliasi faktur berimbang antara tim Finance dan Vendor tanpa memicu perselisihan bisnis.
+3️⃣ Promo Ongkir Instan yang Membakar Kas (Minus Rp 4,9 Miliar)
+Layanan kirim kilat 3 jam membakar Rp 24.500 per transaksi karena subsidi tanpa batas minimum belanja.
+↳ Solusi: Simulasi batas belanja minimum Rp 250rb dipadu strategi cross-selling kasir. Margin langsung berbalik sehat +Rp 12.000/order (Visual waterfall di Slide 6).
 
-3️⃣ Unit Economics Layanan Pengiriman Kilat — Penyelamatan Margin Rp 4,9 Miliar:
-Layanan Express 3-Hour Delivery sangat diminati pelanggan, namun membakar kas: margin kontribusi minus Rp 24.500 per order akibat subsidi ongkir tanpa batas minimum belanja.
-Alih-alih menutup layanan atau menurunkan konversi, simulasi analitik merekomendasikan kenaikan ambang belanja minimum ke Rp 250rb yang didukung strategi bundling produk komplementer (cross-selling). Hasilnya: margin berbalik positif (+Rp 12.000/order).
+4️⃣ Month-2 Retention Cliff (Risiko Rp 4,5 Miliar LTV)
+86% pembeli baru menghilang setelah bulan pertama.
+↳ Solusi: Analisis kohort mengungkap "Golden Re-engagement Window" di hari ke-14 s/d 21 untuk retensi personal (Heatmap kohort di Slide 7).
 
-4️⃣ Jurang Retensi Pelanggan Bulan ke-2 (Month-2 Cliff) — Proteksi Nilai LTV Rp 4,5 Miliar:
-Analisis kohort 12 bulan membuktikan 86% pelanggan baru churn setelah bulan pertama. Query analitik mengidentifikasi "Golden Re-engagement Window" pada hari ke-14 s/d 21 pasca-pembelian pertama untuk memicu kampanye personalisasi terarah.
-
-⚡ Rekayasa Performa Database (Query Tuning):
-Melalui arsitektur Composite B-Tree dan Partial Indexing, latensi query analitik dipangkas 98,3% (dari 8,4 detik menjadi 140 milidetik), memastikan data siap dikonsumsi langsung oleh sistem BI tanpa membebani server transaksi kasir toko.
+⚡ Performa Database Tanpa Kompromi:
+Arsitektur Composite B-Tree & Partial Index memangkas kecepatan query 98,3% (dari 8,4 detik menjadi 140 milidetik)—memastikan analisis data real-time tanpa membebani server transaksi kasir toko (Slide 8).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-👉 Geser dokumen Carousel 10 slide di atas untuk menyimak arsitektur skema DDL, visualisasi waterfall margin, heatmap kohort, dan roadmap eksekusi 90 harinya!
+👉 Geser dokumen Carousel 10 slide di atas untuk menyimak arsitektur data, visualisasi margin waterfall, dan roadmap eksekusi 90 harinya!
 
-📂 Eksplorasi Skrip SQL Lengkap & Laporan Bisnis Eksekutif di GitHub:
+📂 Seluruh source code SQL produksi & Laporan Bisnis Eksekutif dapat diakses di GitHub:
 {github_url}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📬 Terbuka untuk Peluang Karier & Kolaborasi Profesional:
-Saat ini saya aktif membuka diskusi dan peluang kerja penuh waktu (Full-Time) sebagai Data Analyst / Business Intelligence Analyst. Jika tim Anda sedang mencari profesional analitik yang mampu menjembatani kedalaman teknis SQL dengan ketajaman dampak finansial bisnis, mari terhubung!
+📬 Sedang mencari Data Analyst / BI Analyst yang mampu menjembatani eksekusi SQL teknis dengan dampak profitabilitas bisnis?
+Saat ini saya terbuka untuk peluang kerja Full-Time & diskusi profesional. Mari terhubung!
 
 👤 {author_name} | {author_role}
 📧 {author_email}
 💬 WhatsApp: {author_wa_formatted} (https://wa.me/62{author_wa[1:]})
 
-Bagaimana rekan-rekan dan praktisi industri mengelola diskrepansi antara data inventori digital dan stok fisik saat kampanye promo besar? Mari berdiskusi di kolom komentar! 👇
+Bagaimana tim Anda mengelola selisih data stok digital vs fisik saat lonjakan promo besar? Mari berdiskusi di kolom komentar! 👇
 
 #DataAnalytics #BusinessIntelligence #PostgreSQL #SQL #SupplyChainAnalytics #RetailAnalytics #DecisionIntelligence #DataArchitecture #UnitEconomics #HiringDataAnalyst #JobSeeker
 """
