@@ -1,16 +1,16 @@
 # ==============================================================================
 # GitHub Linguist Language Configuration
-# Memastikan repositori terdeteksi 100% sebagai proyek SQL / PLpgSQL murni
+# Memastikan repositori terdeteksi sebagai SQL
 # ==============================================================================
 
-# 1. Daftarkan seluruh file SQL sebagai bahasa pemrograman utama (PLpgSQL / SQL)
-sql/**/*.sql linguist-detectable=true linguist-language=PLpgSQL
-*.sql linguist-detectable=true linguist-language=PLpgSQL
+# 1. Daftarkan seluruh file SQL sebagai SQL
+sql/**/*.sql linguist-detectable=true linguist-language=SQL
+*.sql linguist-detectable=true linguist-language=SQL
 
-# 2. Kecualikan file HTML laporan eksekutif agar tidak mendominasi badge bahasa
+# 2. Kecualikan file HTML laporan eksekutif
 reports/*.html linguist-detectable=false
 reports/*.html linguist-documentation=true
 
-# 3. Tandai skrip generator Python sebagai alat pendukung (support tooling)
+# 3. Tandai skrip generator Python sebagai alat pendukung
 scripts/*.py linguist-detectable=false
 scripts/*.py linguist-vendored=true
