@@ -1,16 +1,19 @@
 # ==============================================================================
 # GitHub Linguist Language Configuration
-# Memastikan repositori terdeteksi sebagai SQL
+# Memastikan repositori terdeteksi 100% sebagai SQL
 # ==============================================================================
 
 # 1. Daftarkan seluruh file SQL sebagai SQL
 sql/**/*.sql linguist-detectable=true linguist-language=SQL
 *.sql linguist-detectable=true linguist-language=SQL
 
-# 2. Kecualikan file HTML laporan eksekutif
-reports/*.html linguist-detectable=false
-reports/*.html linguist-documentation=true
+# 2. Kecualikan file laporan, HTML preview, carousel, dan figures
+reports/** linguist-detectable=false
+reports/** linguist-vendored=true
+reports/** linguist-documentation=true
+*.html linguist-detectable=false
 
-# 3. Tandai skrip generator Python sebagai alat pendukung
-scripts/*.py linguist-detectable=false
-scripts/*.py linguist-vendored=true
+# 3. Tandai skrip generator Python sebagai alat pendukung/vendored
+scripts/** linguist-detectable=false
+scripts/** linguist-vendored=true
+*.py linguist-detectable=false
