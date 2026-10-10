@@ -1,17 +1,16 @@
 """
 ========================================================================================
-Next-Gen Creative LinkedIn Carousel Generator
+Next-Gen Enterprise-Ready LinkedIn Carousel Generator (V3)
 Omnichannel Retail & Supply Chain Analytics Engine (PostgreSQL 15+)
 Author: Fajar Setyadi | Data Analyst & Business Intelligence
 
-Design System V2: "Fintech & Data Terminal Dossier"
-- Asymmetric Bento Grid Architecture (No flat repetitive cards)
-- Visual Waterfall Margin Breakdown (Slide 6)
-- Authentic Visual Cohort Retention Heatmap (Slide 7)
-- Visual Execution Time Benchmark Chart (Slide 8)
-- Tiered SLA Gauge Matrix (Slide 5)
-- Dynamic Color Palette: Deep Obsidian (#070913), Electric Cobalt (#4338ca / #6366f1), 
-  Neon Cyan (#00f2fe), Acid Emerald (#10b981), Solar Rose (#f43f5e)
+Enterprise Polish & Alignment:
+- Realistic Governance Framing: Strategic Enabler & Data Forensic Audit
+- Professional Tone: Replaced naive "superhero" claims with Cross-Functional Decision Intelligence
+- Enterprise Architecture: PostgreSQL Production Analytics Engine (No junior Excel comparisons)
+- Vendor Governance: SLA Dispute Audit Trail (No arbitrary penalty cuts)
+- Commercial Acumen: AOV Restructuring with Cross-Selling Bundling (Conversion Protection)
+- Clean Mobile-First UI/UX: No redundant author avatar on cover slide footer
 ========================================================================================
 """
 
@@ -59,7 +58,7 @@ html_content = f"""<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<title>LinkedIn Carousel - Omnichannel Retail Analytics Engine (Creative V2)</title>
+<title>LinkedIn Carousel - Omnichannel Retail Analytics Engine (Enterprise Edition)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=JetBrains+Mono:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
@@ -208,7 +207,7 @@ html_content = f"""<!DOCTYPE html>
         margin-bottom: 10px;
     }}
     .lead-text {{
-        font-size: 18.5px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 1.5;
         color: #94a3b8;
@@ -323,7 +322,7 @@ html_content = f"""<!DOCTYPE html>
         color: #34d399;
     }}
 
-    /* VISUAL LEAKAGE PIPELINE (SLIDE 2) */
+    /* VISUAL LEAKAGE PIPELINE */
     .pipeline-container {{
         display: flex;
         flex-direction: column;
@@ -432,7 +431,7 @@ html_content = f"""<!DOCTYPE html>
     .str {{ color: #34d399; }}
     .cmt {{ color: #64748b; font-style: italic; }}
 
-    /* VISUAL WATERFALL BAR CHART (SLIDE 6) */
+    /* WATERFALL VISUAL BAR CHART */
     .waterfall-card {{
         background: rgba(13, 19, 35, 0.85);
         border: 1px solid rgba(255, 255, 255, 0.09);
@@ -505,7 +504,7 @@ html_content = f"""<!DOCTYPE html>
         color: #34d399;
     }}
 
-    /* COHORT HEATMAP GRID (SLIDE 7) */
+    /* COHORT HEATMAP GRID */
     .cohort-heatmap-table {{
         width: 100%;
         border-collapse: separate;
@@ -534,7 +533,7 @@ html_content = f"""<!DOCTYPE html>
     .c-cliff {{ background: rgba(244, 63, 94, 0.35); color: #fecdd3; border: 1px solid #f43f5e; }}
     .c-low {{ background: rgba(30, 41, 59, 0.6); color: #94a3b8; }}
 
-    /* QUERY BENCHMARK CHART (SLIDE 8) */
+    /* QUERY BENCHMARK CHART */
     .speed-chart-card {{
         background: rgba(13, 19, 35, 0.85);
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -588,7 +587,7 @@ html_content = f"""<!DOCTYPE html>
         z-index: 2;
     }}
 
-    /* ROADMAP STEPPED MATRIX (SLIDE 9) */
+    /* ROADMAP STEPPED MATRIX */
     .roadmap-timeline {{
         display: flex;
         flex-direction: column;
@@ -678,7 +677,7 @@ html_content = f"""<!DOCTYPE html>
         box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
     }}
 
-    /* COVER HERO (SLIDE 1) */
+    /* COVER VIP CARD (SLIDE 1) */
     .cover-vip-card {{
         background: linear-gradient(145deg, rgba(20, 28, 52, 0.8) 0%, rgba(10, 15, 30, 0.95) 100%);
         border: 1px solid rgba(0, 242, 254, 0.3);
@@ -720,6 +719,23 @@ html_content = f"""<!DOCTYPE html>
         padding: 4px 10px;
         border-radius: 6px;
         color: #cbd5e1;
+    }}
+
+    /* SLIDE 1 DEDICATED CLEAN FOOTER (NO DUPLICATE AVATAR) */
+    .cover-footer-clean {{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }}
+    .cover-footer-context {{
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #94a3b8;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
     }}
 
     /* CLOSING CARD (SLIDE 10) */
@@ -785,7 +801,7 @@ html_content = f"""<!DOCTYPE html>
 <body>
 
 <!-- ======================================================== -->
-<!-- SLIDE 1: MAGNIFICENT COVER                               -->
+<!-- SLIDE 1: COVER (ENTERPRISE FORENSIC AUDIT DOSSIER)       -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide1">
     <div class="cyber-mesh"></div>
@@ -796,7 +812,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="top-status-bar">
             <div class="dossier-tag">
                 <span class="pulse-dot"></span>
-                <span>DATA DOSSIER <span class="accent-cyan">• 50 CABANG RETAIL</span></span>
+                <span>STRATEGIC DATA AUDIT <span class="accent-cyan">• 50 CABANG RETAIL</span></span>
             </div>
             <div class="slide-counter-badge">01 / 10</div>
         </div>
@@ -813,10 +829,10 @@ html_content = f"""<!DOCTYPE html>
 
             <div class="title-block">
                 <h1 class="hero-title">
-                    Menutup Kebocoran Laba <span class="highlight-gradient-cyan">Rp 18,3 Miliar</span> Melalui Arsitektur <span class="highlight-gradient-emerald">PostgreSQL Engine</span>
+                    Audit Forensik Rantai Pasok 50 Gerai: Rekonsiliasi Potensi Margin <span class="highlight-gradient-cyan">Rp 18,3 Miliar</span> Berbasis <span class="highlight-gradient-emerald">PostgreSQL Engine</span>
                 </h1>
                 <p class="lead-text">
-                    Audit data forensik rantai pasok omnichannel: Rekonsiliasi <em>Ghost Stockout</em>, audit penalti SLA vendor, dan restrukturisasi margin unit economics.
+                    Studi Kasus Analitik Relasional untuk Pengambilan Keputusan Direksi: Mitigasi <em>Ghost Stockout</em>, audit kepatuhan SLA vendor, dan restrukturisasi margin unit economics omnichannel.
                 </p>
             </div>
 
@@ -836,21 +852,17 @@ html_content = f"""<!DOCTYPE html>
             </div>
         </div>
 
-        <div class="dossier-footer">
-            <div class="dossier-author">
-                <img class="dossier-avatar" src="{author_photo_uri}" alt="{author_name}">
-                <div>
-                    <div class="dossier-name">{author_name}</div>
-                    <div class="dossier-role">{author_role}</div>
-                </div>
+        <div class="cover-footer-clean">
+            <div class="cover-footer-context">
+                🏢 Laporan Intelijen Keputusan Bisnis Eksekutif
             </div>
-            <div class="dossier-action-btn">Buka Audit Kasus ➔</div>
+            <div class="dossier-action-btn">Mulai Membaca Laporan ➔</div>
         </div>
     </div>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 2: THE LEAKAGE PIPELINE (VISUAL FLOW)              -->
+<!-- SLIDE 2: THE LEAKAGE PIPELINE (4 TITIK KEBOCORAN)        -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide2">
     <div class="cyber-mesh"></div>
@@ -866,14 +878,14 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <div class="title-block">
-            <h2 class="slide-headline">Ilusi Omset Bertumbuh: Di Balik GMV Besar, Laba Bocor <span class="highlight-gradient-rose">Rp 18,3 M</span></h2>
-            <p class="lead-text">Rekonsiliasi data membuktikan bahwa 4 titik rantai pasok mengalami kebocoran biaya masif.</p>
+            <h2 class="slide-headline">Ilusi Omset Bertumbuh: Di Balik GMV Besar, Margin Bocor <span class="highlight-gradient-rose">Rp 18,3 M</span></h2>
+            <p class="lead-text">Rekonsiliasi data membuktikan inefisiensi operasional tersembunyi di 4 titik rantai pasok.</p>
         </div>
 
         <div class="hero-metric-strip rose">
             <div>
                 <div class="metric-mega-number highlight-gradient-rose">Rp 18.330.000.000</div>
-                <div class="metric-caption">Akumulasi Kerugian Margin Operasional per Tahun</div>
+                <div class="metric-caption">Akumulasi Potensi Rekonsiliasi Margin Operasional per Tahun</div>
             </div>
             <div class="metric-pill-badge rose">KRITIS</div>
         </div>
@@ -891,7 +903,7 @@ html_content = f"""<!DOCTYPE html>
             <div class="pipeline-step leaking">
                 <div class="pipe-node-badge">TITIK 2</div>
                 <div class="pipe-content">
-                    <h3>Keterlambatan Supplier Tanpa Penalti</h3>
+                    <h3>Keterlambatan Supplier Tanpa Rekonsiliasi Penalti</h3>
                     <p>Vendor melanggar lead-time SLA sehingga toko kehabisan stok, namun denda luput ditagihkan.</p>
                 </div>
                 <div class="pipe-leak-amount">- Rp 3,24 M</div>
@@ -900,7 +912,7 @@ html_content = f"""<!DOCTYPE html>
             <div class="pipeline-step leaking">
                 <div class="pipe-node-badge">TITIK 3</div>
                 <div class="pipe-content">
-                    <h3>Defisit Subsidi Ongkir Express</h3>
+                    <h3>Defisit Subsidi Ongkir Layanan Express</h3>
                     <p>Layanan 3-Hour Delivery sangat laris, tetapi per pesanan nombok Rp 24.500 akibat subsidi kurir.</p>
                 </div>
                 <div class="pipe-leak-amount">- Rp 4,88 M</div>
@@ -930,7 +942,7 @@ html_content = f"""<!DOCTYPE html>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 3: RELATIONAL ENGINE INTEGRITY                      -->
+<!-- SLIDE 3: ARSITEKTUR DATABASE PRODUKSI                    -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide3">
     <div class="cyber-mesh"></div>
@@ -940,14 +952,14 @@ html_content = f"""<!DOCTYPE html>
         <div class="top-status-bar">
             <div class="dossier-tag">
                 <span class="pulse-dot"></span>
-                <span>ENGINEERING PILLAR <span class="accent-cyan">• DATA INTEGRITY BY DESIGN</span></span>
+                <span>DATA ARCHITECTURE <span class="accent-cyan">• SINGLE SOURCE OF TRUTH</span></span>
             </div>
             <div class="slide-counter-badge">03 / 10</div>
         </div>
 
         <div class="title-block">
-            <h2 class="slide-headline">Mengapa Analisis Selesai di <span class="highlight-gradient-cyan">PostgreSQL</span>, Bukan di Excel?</h2>
-            <p class="lead-text">Prinsip Analis Senior: Integritas data dan kalkulasi berat harus diselesaikan di pintu gerbang database.</p>
+            <h2 class="slide-headline">Arsitektur Database Produksi: Menjaga Integritas Data Relasional Sebelum Agregasi BI</h2>
+            <p class="lead-text">Prinsip Analytics Engineering: Integritas skema di tingkat database mengeliminasi anomali data di pintu masuk.</p>
         </div>
 
         <div class="terminal-box">
@@ -977,11 +989,11 @@ html_content = f"""<!DOCTYPE html>
             <div class="bento-card highlight-cyan-border">
                 <div style="font-size: 24px; margin-bottom: 8px;">🛡️</div>
                 <h3 style="font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px;">Zero Garbage In di Level Skema</h3>
-                <p style="font-size: 14px; color: #94a3b8; line-height: 1.45;">PostgreSQL Domains &amp; ENUMs menolak typo kategori dan harga minus secara instan. Tim BI tidak perlu membersihkan data berulang kali.</p>
+                <p style="font-size: 14px; color: #94a3b8; line-height: 1.45;">PostgreSQL Domains &amp; ENUMs menolak salah ketik kategori dan harga minus secara instan. Menjamin kebersihan data sebelum dikonsumsi analis.</p>
             </div>
             <div class="bento-card highlight-cyan-border">
                 <div style="font-size: 24px; margin-bottom: 8px;">⚡</div>
-                <h3 style="font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px;">100% Plug-and-Play untuk BI</h3>
+                <h3 style="font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 6px;">100% Plug-and-Play untuk BI Layer</h3>
                 <p style="font-size: 14px; color: #94a3b8; line-height: 1.45;">Mart analitik sudah teragregasi secara terstruktur. Saat dihubungkan ke Power BI atau Tableau, dashboard langsung responsif tanpa lag.</p>
             </div>
         </div>
@@ -1017,7 +1029,7 @@ html_content = f"""<!DOCTYPE html>
 
         <div class="title-block">
             <h2 class="slide-headline">Membasmi <span class="highlight-gradient-cyan">"Ghost Stockout"</span>: Barang Ada di Sistem, Fisik Rak Kosong</h2>
-            <p class="lead-text">Order online masuk, namun fisik nihil akibat salah letak atau shrinkage. 6,8% pesanan batal sepihak.</p>
+            <p class="lead-text">Order online masuk, namun fisik nihil akibat salah rak atau shrinkage. 6,8% pesanan batal sepihak.</p>
         </div>
 
         <div class="hero-metric-strip">
@@ -1069,7 +1081,7 @@ html_content = f"""<!DOCTYPE html>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 5: KASUS 2 - TIERED VENDOR SLA GAUGE               -->
+<!-- SLIDE 5: KASUS 2 - VENDOR SLA COMPLIANCE & DISPUTE AUDIT -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide5">
     <div class="cyber-mesh"></div>
@@ -1085,14 +1097,14 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <div class="title-block">
-            <h2 class="slide-headline">Menagih Hak Perusahaan: Audit Penalti Keterlambatan <span class="highlight-gradient-emerald">SLA Vendor</span></h2>
-            <p class="lead-text">Vendor terlambat kirim barang membuat rak toko kosong saat weekend. Denda kontrak luput ditagihkan.</p>
+            <h2 class="slide-headline">Menerbitkan <span class="highlight-gradient-emerald">SLA Audit Trail</span> yang Sah untuk Rekonsiliasi Pembayaran Vendor</h2>
+            <p class="lead-text">Keterlambatan pengiriman supplier membuat rak kosong saat akhir pekan. Denda kontrak butuh alat bukti rekonsiliasi yang valid.</p>
         </div>
 
         <div class="hero-metric-strip emerald">
             <div>
                 <div class="metric-mega-number highlight-gradient-emerald">Rp 3.240.000.000</div>
-                <div class="metric-caption">Klaim Penalti Vendor Sah Berhasil Direkonsiliasi</div>
+                <div class="metric-caption">Klaim Penalti Vendor Sah Berhasil Direkonsiliasi Berimbang</div>
             </div>
             <div class="metric-pill-badge emerald">100% PATUH KONTRAK</div>
         </div>
@@ -1124,12 +1136,12 @@ html_content = f"""<!DOCTYPE html>
             <div class="bento-card" style="border-color: rgba(244, 63, 94, 0.3);">
                 <div style="font-size: 12px; font-weight: 800; color: #fb7185; text-transform: uppercase;">SEBELUMNYA (MANUAL)</div>
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800; color: #fff; margin: 6px 0;">Rp 0 Ditagih</div>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.4;">Finance kewalahan mencocokkan surat jalan fisik vs ratusan invoice PO setiap bulan.</p>
+                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.4;">Finance dan Procurement kesulitan membuktikan keterlambatan karena arsip surat jalan tersebar manual.</p>
             </div>
             <div class="bento-card" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(10, 30, 20, 0.6);">
-                <div style="font-size: 12px; font-weight: 800; color: #34d399; text-transform: uppercase;">SESUDAH (AUTOMATED SQL)</div>
+                <div style="font-size: 12px; font-weight: 800; color: #34d399; text-transform: uppercase;">SESUDAH (SLA AUDIT TRAIL)</div>
                 <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800; color: #34d399; margin: 6px 0;">Rp 3,24 Miliar</div>
-                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.4;">Denda dihitung otomatis dan langsung dipotong saat kliring pembayaran tagihan vendor.</p>
+                <p style="font-size: 13.5px; color: #94a3b8; line-height: 1.4;">Menyediakan alat bukti objektif untuk rekonsiliasi pembayaran faktur vendor tanpa memicu sengketa sepihak.</p>
             </div>
         </div>
 
@@ -1147,7 +1159,7 @@ html_content = f"""<!DOCTYPE html>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 6: KASUS 3 - WATERFALL MARGIN BREAKDOWN            -->
+<!-- SLIDE 6: KASUS 3 - WATERFALL MARGIN & CONVERSION SAFE    -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide6">
     <div class="cyber-mesh"></div>
@@ -1210,8 +1222,8 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <div class="bento-card highlight-emerald-border">
-            <h3 style="font-size: 17px; font-weight: 800; color: #34d399; margin-bottom: 4px;">💡 Solusi SQL: Menaikkan Syarat Belanja ke Rp 250.000</h3>
-            <p style="font-size: 14px; color: #cbd5e1; line-height: 1.45;">Tanpa mematikan layanan kilat yang disukai pembeli, menaikkan syarat belanja minimum membalikkan margin menjadi <strong>+Rp 12.000/order</strong> dan menyelamatkan <strong>Rp 4,88 Miliar</strong> per tahun.</p>
+            <h3 style="font-size: 17px; font-weight: 800; color: #34d399; margin-bottom: 4px;">💡 Solusi Taktis: Threshold Rp 250.000 + Rekomendasi Bundling</h3>
+            <p style="font-size: 14px; color: #cbd5e1; line-height: 1.45;">Alih-alih mematikan promo atau memicu penurunan konversi checkout, manajemen menaikkan syarat belanja didukung <strong>rekomendasi bundling produk komplementer (cross-selling)</strong> di kasir/aplikasi. Margin berbalik sehat <strong>+Rp 12.000/order</strong>, memulihkan <strong>Rp 4,88 Miliar</strong> per tahun.</p>
         </div>
 
         <div class="dossier-footer">
@@ -1314,7 +1326,7 @@ html_content = f"""<!DOCTYPE html>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 8: QUERY SPEED BENCHMARK (VISUAL CHART)            -->
+<!-- SLIDE 8: QUERY SPEED BENCHMARK                           -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide8">
     <div class="cyber-mesh"></div>
@@ -1400,16 +1412,16 @@ html_content = f"""<!DOCTYPE html>
         </div>
 
         <div class="title-block">
-            <h2 class="slide-headline">Rencana Aksi 90 Hari: Menyelamatkan Laba <span class="highlight-gradient-emerald">Rp 18,3 Miliar</span></h2>
-            <p class="lead-text">Panduan eksekusi taktis untuk direksi dan manajemen operasional.</p>
+            <h2 class="slide-headline">Rencana Aksi 90 Hari: Menyelamatkan Potensi Margin <span class="highlight-gradient-emerald">Rp 18,3 Miliar</span></h2>
+            <p class="lead-text">Panduan eksekusi lintas fungsi untuk tim Finance, Procurement, dan Operasional.</p>
         </div>
 
         <div class="roadmap-timeline">
             <div class="timeline-node">
                 <div class="node-phase-badge">HARI 1 - 30</div>
                 <div class="node-body">
-                    <h3>Audit &amp; Potong Penalti Supplier SLA</h3>
-                    <p>Integrasi kalkulasi denda otomatis ke sistem pembayaran invoice pembelian.</p>
+                    <h3>Finance &amp; Procurement: SLA Audit Trail Reconciliation</h3>
+                    <p>Integrasi kalkulasi bukti audit denda ke proses rekonsiliasi faktur pembelian vendor.</p>
                 </div>
                 <div class="node-gain">+ Rp 3,24 M</div>
             </div>
@@ -1417,8 +1429,8 @@ html_content = f"""<!DOCTYPE html>
             <div class="timeline-node">
                 <div class="node-phase-badge">HARI 31 - 60</div>
                 <div class="node-body">
-                    <h3>Restrukturisasi Ongkir &amp; Alert Stok Rak</h3>
-                    <p>Naikkan minimum order belanja ke Rp 250rb &amp; audit stok rak prioritas harian.</p>
+                    <h3>Operations &amp; Merchandising: Basket Threshold &amp; Cycle Count</h3>
+                    <p>Naikkan minimum order ke Rp 250rb dengan promo bundling &amp; audit stok rak prioritas harian.</p>
                 </div>
                 <div class="node-gain">+ Rp 10,60 M</div>
             </div>
@@ -1426,8 +1438,8 @@ html_content = f"""<!DOCTYPE html>
             <div class="timeline-node">
                 <div class="node-phase-badge">HARI 61 - 90</div>
                 <div class="node-body">
-                    <h3>Automasi Kampanye Re-Engagement Kohort</h3>
-                    <p>Trigger promo personalisasi hari ke-14 pada pembeli baru via integrasi CRM.</p>
+                    <h3>Marketing &amp; CRM: Automasi Re-Engagement Kohort Hari ke-14</h3>
+                    <p>Trigger promo personalisasi tepat sebelum pembeli baru memasuki jurang churn.</p>
                 </div>
                 <div class="node-gain">+ Rp 4,49 M</div>
             </div>
@@ -1436,7 +1448,7 @@ html_content = f"""<!DOCTYPE html>
         <div class="hero-metric-strip emerald">
             <div>
                 <div class="metric-mega-number highlight-gradient-emerald">Rp 18.330.000.000</div>
-                <div class="metric-caption">Total Estimasi Pemulihan Laba Bersih Tahunan (Net Profit Recovery)</div>
+                <div class="metric-caption">Total Estimasi Pemulihan Margin Tahunan (Annual Net Profit Recovery)</div>
             </div>
             <div class="metric-pill-badge emerald">100% TERUKUR</div>
         </div>
@@ -1455,7 +1467,7 @@ html_content = f"""<!DOCTYPE html>
 </div>
 
 <!-- ======================================================== -->
-<!-- SLIDE 10: VIP EXECUTIVE CLOSING                          -->
+<!-- SLIDE 10: VIP EXECUTIVE CLOSING & COLLABORATION          -->
 <!-- ======================================================== -->
 <div class="slide-wrapper" id="slide10">
     <div class="cyber-mesh"></div>
@@ -1516,7 +1528,7 @@ html_content = f"""<!DOCTYPE html>
                     <div class="dossier-role">{author_role}</div>
                 </div>
             </div>
-            <div class="dossier-action-btn" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">Terbuka untuk Peluang Kerja</div>
+            <div class="dossier-action-btn" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #34d399;">Terbuka untuk Diskusi Strategis</div>
         </div>
     </div>
 </div>
@@ -1528,7 +1540,7 @@ html_content = f"""<!DOCTYPE html>
 # Save updated HTML file
 with open(html_file, "w", encoding="utf-8") as f:
     f.write(html_content)
-print(f"Updated Creative V2 HTML preview saved: {html_file}")
+print(f"Enterprise V3 HTML preview saved: {html_file}")
 
 # Chrome / Edge detection
 chrome_paths = [
@@ -1542,7 +1554,7 @@ for cp in chrome_paths:
         break
 
 if browser_bin:
-    print(f"Rendering high-res PDF with: {browser_bin}")
+    print(f"Rendering high-res Enterprise PDF with: {browser_bin}")
     cmd_pdf = [
         browser_bin,
         "--headless",
@@ -1555,7 +1567,7 @@ if browser_bin:
     subprocess.run(cmd_pdf, capture_output=True)
     print(f"SUCCESS: Generated PDF carousel: {pdf_file.name} ({pdf_file.stat().st_size / 1024:.2f} KB)")
 
-    print("Rendering 10 Individual High-Res PNG Slides with new creative layouts...")
+    print("Rendering 10 Individual High-Res PNG Slides (Enterprise V3)...")
     for i in range(1, 11):
         slide_png = CAROUSEL_DIR / f"slide_{i:02d}.png"
         slide_html = CAROUSEL_DIR / f"_temp_slide_{i:02d}.html"
@@ -1584,4 +1596,51 @@ if browser_bin:
                 slide_html.unlink()
             print(f"  Slide {i:02d} PNG: {slide_png.name} (Exists: {slide_png.exists()})")
 
-print("NEXT-GEN CREATIVE CAROUSEL GENERATED SUCCESSFULLY!")
+# Enterprise-Ready Post Copy
+post_copy = f"""Banyak retail terjebak pada ilusi penjualan: "GMV bertumbuh 22%, bisnis tampak sehat."
+Namun saat data transaksi 50 cabang dan 3 gudang regional diaudit forensik, kami mengidentifikasi potensi kebocoran margin mencapai Rp 18,3 Miliar per tahun.
+
+Sebagai Data Analyst & Business Intelligence, data bukan sekadar grafik visual di layar dashboard—melainkan katalisator pengambilan keputusan direksi: MENGAPA inefisiensi terjadi, DI MANA titik kebocorannya, dan BAGAIMANA memulihkannya secara berimbang tanpa merusak operasi bisnis.
+
+Dalam studi kasus ini, seluruh mesin audit forensik dirancang 100% menggunakan Enterprise PostgreSQL 15+ Engine sebagai Production Analytics Foundation.
+
+Berikut 4 temuan kritis hasil audit data forensik:
+
+1️⃣ Membasmi "Ghost Stockout" (Phantom Inventory) — Mitigasi Lost Sales Rp 5,7 Miliar:
+Sistem mencatat stok barang tersedia, namun fisik di rak toko kosong. Akibatnya 6,8% pesanan online dibatalkan sepihak dan mengecewakan pelanggan.
+Menggunakan Window Function LAG() dan discrepancy tracking, kami mendeteksi anomali selisih stok secara otomatis dan menerbitkan prioritas audit fisik harian ke staf gudang, menekan pembatalan pesanan hingga 0,4%.
+
+2️⃣ Audit Kepatuhan & SLA Dispute Trail Vendor — Rekonsiliasi Rp 3,2 Miliar:
+Keterlambatan pengiriman vendor kerap membuat rak toko kosong saat akhir pekan, namun denda kontrak luput ditagihkan karena kesulitan rekonsiliasi manual.
+Dengan pendekatan Tiered Grace-Period (toleransi <24 jam, denda proporsional >48 jam), query analitik menghasilkan alat bukti SLA Dispute Audit Trail yang sah untuk rekonsiliasi faktur berimbang antara tim Finance dan Vendor tanpa memicu sengketa sepihak.
+
+3️⃣ Unit Economics Promo Ongkir Kilat — Pemulihan Margin Rp 4,9 Miliar:
+Layanan Express 3-Hour Delivery sangat laris, tetapi membakar kas: margin kontribusi minus Rp 24.500 per transaksi karena subsidi kurir tanpa batas minimal belanja.
+Alih-alih mematikan layanan yang disukai pelanggan atau memicu penurunan konversi, simulasi analitik merekomendasikan penyesuaian batas belanja ke Rp 250rb yang didukung strategi bundling produk komplementer (cross-selling) di kasir/aplikasi. Margin berbalik sehat (+Rp 12.000/order).
+
+4️⃣ Jurang Retensi Pelanggan Bulan ke-2 (Month 2 Cliff) — Pengamanan Rp 4,5 Miliar LTV:
+Analisis kohort 12 bulan membuktikan 86% pelanggan baru churn setelah bulan pertama. Query analitik mengidentifikasi "Golden Re-engagement Window" pada hari ke-14 s/d 21 pasca pembelian pertama untuk memicu penawaran personalisasi terarah.
+
+⚡ Efisiensi Mesin Database:
+Melalui strategi Composite B-Tree dan Partial Indexing, waktu respon query analitik dipangkas 98,3% (dari 8,4 detik menjadi 140 milidetik), memastikan data 100% Plug-and-Play untuk konsumsi BI tanpa membebani database kasir.
+
+👉 Geser dokumen carousel 10 slide di atas untuk melihat arsitektur skema DDL, visual waterfall margin, heatmap kohort, dan roadmap eksekusi 90 harinya!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📂 Eksplorasi Skrip SQL Lengkap & Laporan Bisnis di GitHub:
+{github_url}
+
+📬 Terbuka untuk Diskusi & Peluang Kerja (Data Analyst / BI Analyst):
+👤 {author_name} | {author_role}
+📧 {author_email}
+💬 WhatsApp: {author_wa_formatted} (https://wa.me/62{author_wa[1:]})
+
+Bagaimana pendekatan rekan-rekan dalam mengelola data persediaan phantom vs fisik saat kampanye promo besar? Mari berdiskusi di kolom komentar! 👇
+
+#DataAnalytics #BusinessIntelligence #PostgreSQL #SQL #SupplyChainAnalytics #RetailAnalytics #DecisionIntelligence #DataArchitecture #UnitEconomics #HiringDataAnalyst #JobSeeker
+"""
+
+with open(post_copy_file, "w", encoding="utf-8") as f:
+    f.write(post_copy)
+print(f"Enterprise Post Copy saved: {post_copy_file}")
+print("ALL ENTERPRISE ASSETS GENERATED SUCCESSFULLY!")
