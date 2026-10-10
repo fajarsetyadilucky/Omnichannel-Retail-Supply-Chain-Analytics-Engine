@@ -1,0 +1,16 @@
+supplier_id,supplier_name,category_specialty,promised_lead_time_days,sla_target_pct,penalty_rate_pct_per_day,pic_name,contact_email,phone,city
+SUP-001,PT Indofood CBP Sukses Makmur Tbk,Packaged Food,3,96.0,1.5,Ir. Budi Santoso,supplychain@icbp.indofood.co.id,021-57958822,Jakarta Utara
+SUP-002,PT Unilever Indonesia Tbk,Personal Care,4,95.0,2.0,Stephanie Clarissa Halim,b2b.order@unilever.com,021-80827000,Tangerang
+SUP-003,PT Mayora Indah Tbk,Packaged Food,3,95.0,1.5,Hartanto Sugiarto,institutional.sales@mayora.co.id,021-5655320,Jakarta Barat
+SUP-004,PT Wings Surya (Wings Group),Home Care,4,94.0,1.5,Haryanto Wibowo,distribution@wingscorp.com,021-4603120,Jakarta Timur
+SUP-005,PT Tirta Investama (Danone Aqua),Beverages,2,98.0,2.5,Aditya Permana,keyaccount.aqua@danone.com,021-29961000,Jakarta Selatan
+SUP-006,PT Frisian Flag Indonesia,Dairy & Chilled,3,96.0,2.0,Endang Widyastuti,sales.logistics@frieslandcampina.com,021-8410945,Jakarta Timur
+SUP-007,PT Ultrajaya Milk Industry Tbk,Dairy & Chilled,3,97.0,2.0,Danang Kusumo,orderdesk@ultrajaya.co.id,022-86700700,Bandung / Hub Jkt
+SUP-008,PT Nestlé Indonesia,Dairy & Chilled,4,95.0,1.8,Michael Steven Chandra,customer.service@id.nestle.com,021-78836000,Jakarta Selatan
+SUP-009,PT Kao Indonesia,Personal Care,4,94.0,1.5,Sri Rahayu Handayani,distribution.center@kao.co.id,021-7982245,Bekasi
+SUP-010,PT Kalbe Farma Tbk (Consumer Health),Beverages,3,96.0,2.0,Dr. Wahyu Setiawan,procurement.otc@kalbe.co.id,021-42873888,Jakarta Pusat
+SUP-011,PT Orang Tua Group (OT),Packaged Food,3,95.0,1.5,Tanujaya Limanto,sales.fmcg@ot.id,021-58397888,Jakarta Barat
+SUP-012,PT Garudafood Putra Putri Jaya Tbk,Packaged Food,3,95.0,1.5,Agus Triyono,supply.chain@garudafood.co.id,021-72890000,Jakarta Selatan
+SUP-013,PT Nutrifood Indonesia,Beverages,3,96.0,1.8,Annisa Nurul Zahra,b2b@nutrifood.co.id,021-4605780,Jakarta Timur
+SUP-014,PT Charoen Pokphand Fresh (Prima),Fresh Produce,2,98.0,3.0,Maruli Harahap,fresh.inbound@cp.co.id,021-6919999,Jakarta Utara
+SUP-015,PT Japfa Comfeed Fresh Farm,Fresh Produce,2,98.0,3.0,Suryanto Subagio,meatpoultry.sales@japfacomfeed.co.id,021-5724420,Jakarta Selatan

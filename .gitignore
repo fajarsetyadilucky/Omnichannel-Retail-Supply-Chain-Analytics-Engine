@@ -1,0 +1,26 @@
+# Python bytecode & environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.venv
+venv/
+env/
+.env
+
+# Scratch & Local Test Workspaces
+scratch/
+temp/
+*.tmp
+*.log
+
+# Database dumps & Compressed files
+*.dump
+*.tar.gz
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,13 @@
+store_id,store_name,city,district,address,store_type,sqm_capacity,manager_name,contact_phone,opened_date
+STR-001,Hub Senayan City,Jakarta Pusat,Tanah Abang / Gelora,"Jl. Asia Afrika Lot 19, Gelora",Flagship Store,1200,Dimas Arya Pratama,021-57900121,2021-03-15
+STR-002,Hub Kelapa Gading DC,Jakarta Utara,Kelapa Gading,Jl. Boulevard Barat Raya Blok LA-1,Dark Store / Fulfillment Hub,2500,Budi Santoso Wijaya,021-45851102,2021-06-01
+STR-003,Hub Puri Kencana,Jakarta Barat,Kembangan,Jl. Puri Kencana Blok A No. 12,Express Hub,850,Jessica Salim Hartono,021-58302213,2021-08-20
+STR-004,Hub Pondok Indah,Jakarta Selatan,Kebayoran Lama,Jl. Metro Pondok Indah Blok TB-2,Flagship Store,1400,Muhammad Farhan Hidayat,021-75023914,2021-11-10
+STR-005,Hub Cakung Mega DC,Jakarta Timur,Cakung,"Kawasan Industri Pulo Gadung, Jl. Rawa Gelam IV",Dark Store / Fulfillment Hub,5000,Hendra Gunawan Setyadi,021-46019905,2020-01-10
+STR-006,Hub BSD Green Office,Tangerang Selatan,Serpong,"BSD Green Office Park 6, Jl. Grand Boulevard",Dark Store / Fulfillment Hub,2200,Kevin Daniel Winata,021-30458806,2022-02-14
+STR-007,Hub Bintaro Sektor 9,Tangerang Selatan,Pondok Aren,Jl. Bintaro Utama 9 Blok HB-1 No. 5,Express Hub,900,Annisa Dwi Lestari,021-74523307,2022-04-05
+STR-008,Hub Karawaci Central,Tangerang,Karawaci,Jl. Boulevard Diponegoro No. 105,Express Hub,950,Reza Setiawan Utomo,021-54602208,2022-07-19
+STR-009,Hub Bekasi Summarecon,Bekasi,Bekasi Utara,Jl. Bulevar Ahmad Yani Blok B-08,Dark Store / Fulfillment Hub,2800,Bagus Cahyo Nugroho,021-88891109,2022-09-01
+STR-010,Hub Cibubur Junction,Bekasi,Jatisampurna,Jl. Alternatif Cibubur Km. 4,Express Hub,800,Siti Rahma Damayanti,021-84594410,2023-01-12
+STR-011,Hub Margonda Raya,Depok,Margonda / Beji,Jl. Margonda Raya No. 340,Dark Store / Fulfillment Hub,1800,Asep Cecep Hidayat,021-77205511,2023-03-22
+STR-012,Hub Bogor Pajajaran,Bogor,Bogor Timur,"Jl. Pajajaran No. 88A, Baranangsiang",Express Hub,1100,Maruli Bastian Simanjuntak,0251-8312912,2023-05-18

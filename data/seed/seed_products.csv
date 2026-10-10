@@ -1,0 +1,61 @@
+product_id,product_name,category,subcategory,cost_price,selling_price,supplier_id,is_perishable,velocity_tier,min_reorder_point
+PRD-001,Indomie Goreng Spesial 85g,Packaged Food,Instant Noodles,2600,3500,SUP-001,False,FAST,50
+PRD-002,Indomie Kuah Ayam Bawang 69g,Packaged Food,Instant Noodles,2500,3300,SUP-001,False,FAST,50
+PRD-003,Indomie Hype Abis Seblak Hot 75g,Packaged Food,Instant Noodles,2800,3700,SUP-001,False,MEDIUM,25
+PRD-004,Pop Mie Rasa Ayam Bawang 75g,Packaged Food,Instant Noodles,4200,5800,SUP-001,False,FAST,50
+PRD-005,Roma Biskuit Kelapa 300g,Packaged Food,Biscuits,9500,12500,SUP-003,False,MEDIUM,25
+PRD-006,Beng-Beng Wafer Cokelat Box 17x20g,Packaged Food,Confectionery,24000,31000,SUP-003,False,FAST,50
+PRD-007,Kopiko Candy Bag 150g,Packaged Food,Confectionery,7500,10000,SUP-003,False,SLOW,10
+PRD-008,Tango Wafer Cokelat 130g,Packaged Food,Biscuits,7800,10500,SUP-011,False,MEDIUM,25
+PRD-009,Garuda Kacang Kulit 375g,Packaged Food,Snacks,28000,36000,SUP-012,False,MEDIUM,25
+PRD-010,Gery Saluut Malkist Sweet Cheese 110g,Packaged Food,Biscuits,6500,8500,SUP-012,False,FAST,50
+PRD-011,Bimoli Minyak Goreng Pouch 2L,Packaged Food,Cooking Essentials,32000,38500,SUP-001,False,FAST,50
+PRD-012,Sania Minyak Goreng Pouch 2L,Packaged Food,Cooking Essentials,31500,37500,SUP-001,False,FAST,50
+PRD-013,Gulaku Gula Pasir Putih Premium 1kg,Packaged Food,Cooking Essentials,15000,18500,SUP-001,False,FAST,50
+PRD-014,Aqua Air Mineral Botol 600ml,Beverages,Bottled Water,2500,4000,SUP-005,False,FAST,50
+PRD-015,Aqua Air Mineral Galon 19L Refill,Beverages,Bottled Water,16000,22000,SUP-005,False,FAST,50
+PRD-016,Mizone Isotonic Apple Guava 500ml,Beverages,Isotonic,4500,6500,SUP-005,False,MEDIUM,25
+PRD-017,Hydro Coco Natural Coconut Water 250ml,Beverages,Healthy Drinks,6500,9000,SUP-010,False,FAST,50
+PRD-018,NutriSari Jeruk Manis Renceng 10x14g,Beverages,Powder Drink,11000,14500,SUP-013,False,MEDIUM,25
+PRD-019,Tropicana Slim Classic Stevia 50 Sachet,Beverages,Healthy Essentials,34000,44000,SUP-013,False,SLOW,10
+PRD-020,Teh Botol Sosro Kotak 250ml,Beverages,Ready to Drink Tea,3000,4500,SUP-005,False,FAST,50
+PRD-021,Pocari Sweat Ion Supply 500ml,Beverages,Isotonic,6800,9200,SUP-010,False,FAST,50
+PRD-022,Good Day Kopi Cappuccino Box 5x25g,Beverages,Coffee,9800,13000,SUP-003,False,FAST,50
+PRD-023,Ultra Milk UHT Full Cream 1000ml,Dairy & Chilled,UHT Milk,17500,22500,SUP-007,False,FAST,50
+PRD-024,Ultra Milk UHT Cokelat 1000ml,Dairy & Chilled,UHT Milk,17500,22500,SUP-007,False,FAST,50
+PRD-025,Ultra Milk UHT Stroberi 200ml,Dairy & Chilled,UHT Milk,4200,5800,SUP-007,False,FAST,50
+PRD-026,Frisian Flag Susu Kental Manis Gold 370g,Dairy & Chilled,Condensed Milk,13000,16800,SUP-006,False,FAST,50
+PRD-027,Frisian Flag Purefarm Full Cream 946ml,Dairy & Chilled,Fresh & Pasteurized,18500,23500,SUP-006,True,MEDIUM,25
+PRD-028,Bear Brand Susu Steril Can 189ml,Dairy & Chilled,Sterilized Milk,9200,11800,SUP-008,False,FAST,50
+PRD-029,Dancow FortiGro Instant Box 400g,Dairy & Chilled,Powder Milk,42000,52000,SUP-008,False,MEDIUM,25
+PRD-030,Greenfields Yogurt Drink Blueberry 250ml,Dairy & Chilled,Yogurt,8500,11500,SUP-007,True,MEDIUM,25
+PRD-031,Pepsodent Pencegah Gigi Berlubang 190g,Personal Care,Oral Care,11500,15500,SUP-002,False,FAST,50
+PRD-032,Lifebuoy Sabun Mandi Cair Total 10 Pouch 450ml,Personal Care,Body Wash,21000,28000,SUP-002,False,FAST,50
+PRD-033,Sunsilk Shampoo Black Shine Botol 160ml,Personal Care,Hair Care,22000,29000,SUP-002,False,MEDIUM,25
+PRD-034,Clear Men Anti Dandruff Cool Sport 160ml,Personal Care,Hair Care,26000,34500,SUP-002,False,MEDIUM,25
+PRD-035,Rexona Men Deodorant Roll On Ice Cool 45ml,Personal Care,Deodorant,17000,23000,SUP-002,False,MEDIUM,25
+PRD-036,Biore Men Double Scrub Facial Wash 100g,Personal Care,Face Care,25000,33500,SUP-009,False,MEDIUM,25
+PRD-037,Biore Body Foam Pure Mild Refill 450ml,Personal Care,Body Wash,22500,29500,SUP-009,False,FAST,50
+PRD-038,Laurier Relax Night Wing 35cm 12s,Personal Care,Sanitary,15500,20500,SUP-009,False,FAST,50
+PRD-039,Vaseline Healthy Bright Body Lotion 200ml,Personal Care,Skin Care,26000,35000,SUP-002,False,MEDIUM,25
+PRD-040,Close Up Toothpaste Ever Fresh Red 160g,Personal Care,Oral Care,14500,19500,SUP-002,False,SLOW,10
+PRD-041,Rinso Anti Noda Deterjen Cair Classic 750ml,Home Care,Laundry Detergent,19500,26000,SUP-002,False,FAST,50
+PRD-042,Sunlight Pencuci Piring Jeruk Nipis 700ml,Home Care,Dishwashing,13500,17500,SUP-002,False,FAST,50
+PRD-043,Molto All-in-1 Softener Blue Refill 720ml,Home Care,Fabric Care,18500,24500,SUP-002,False,MEDIUM,25
+PRD-044,SoKlin Liquid Deterjen Bio-Matic Pouch 700ml,Home Care,Laundry Detergent,15000,20500,SUP-004,False,FAST,50
+PRD-045,Mama Lemon Cairan Pencuci Piring Jeruk Nipis 680ml,Home Care,Dishwashing,11500,15000,SUP-004,False,FAST,50
+PRD-046,Wipol Karbol Pembersih Lantai Cemara 750ml,Home Care,Floor Cleaner,16000,21500,SUP-002,False,FAST,50
+PRD-047,Super Pell Pembersih Lantai Apple 770ml,Home Care,Floor Cleaner,12500,16800,SUP-002,False,MEDIUM,25
+PRD-048,Baygon Aerosol Anti Nyamuk Zen Garden 600ml,Home Care,Insecticide,36000,46000,SUP-004,False,MEDIUM,25
+PRD-049,Attack Plus Softener Deterjen Bubuk 800g,Home Care,Laundry Detergent,21500,28000,SUP-009,False,MEDIUM,25
+PRD-050,Stella Air Freshener Gantung Caddy Orange,Home Care,Air Care,9500,13000,SUP-004,False,SLOW,10
+PRD-051,Ayam Broiler Utuh Higienis Prima 0.9 - 1.0 kg,Fresh Produce,Fresh Meat,33000,42000,SUP-014,True,FAST,50
+PRD-052,Dada Ayam Fillet Boneless Prima 500g,Fresh Produce,Fresh Meat,28000,36500,SUP-014,True,FAST,50
+PRD-053,Telur Ayam Negeri Fresh Pack Isi 10 Butir,Fresh Produce,Fresh Poultry,19000,25000,SUP-015,True,FAST,50
+PRD-054,Telur Ayam Omega-3 Nutriplus Isi 10 Butir,Fresh Produce,Fresh Poultry,27000,35000,SUP-015,True,MEDIUM,25
+PRD-055,Daging Sapi Rendang Fresh Lokal 500g,Fresh Produce,Fresh Meat,62000,78000,SUP-014,True,MEDIUM,25
+PRD-056,Pisang Cavendish Sunpride Premium 1 Sisir,Fresh Produce,Fresh Fruits,24000,32000,SUP-014,True,FAST,50
+PRD-057,Apel Fuji Wang Shan Fresh 1kg,Fresh Produce,Fresh Fruits,38000,49000,SUP-014,True,MEDIUM,25
+PRD-058,Bawang Merah Brebes Super Pack 500g,Fresh Produce,Vegetables,22000,29000,SUP-015,True,FAST,50
+PRD-059,Bawang Putih Kating Super Pack 500g,Fresh Produce,Vegetables,21000,27500,SUP-015,True,FAST,50
+PRD-060,Cabai Rawit Merah Segar 250g,Fresh Produce,Vegetables,17000,23000,SUP-015,True,FAST,50

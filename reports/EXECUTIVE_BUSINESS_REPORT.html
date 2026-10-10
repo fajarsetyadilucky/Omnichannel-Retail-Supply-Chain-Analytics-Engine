@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Eksekutif Manajemen — Omnichannel Retail & Supply Chain Performance Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --secondary-navy: #1e293b;
+            --accent-gold: #d97706;
+            --accent-gold-light: #fef3c7;
+            --success-emerald: #059669;
+            --success-light: #ecfdf5;
+            --danger-crimson: #dc2626;
+            --danger-light: #fef2f2;
+            --warning-amber: #d97706;
+            --bg-paper: #ffffff;
+            --bg-page: #f1f5f9;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+            padding: 30px 15px;
+        }
+
+        .document-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* PER-PAGE CONTAINER UNTUK PREVENT AWKWARD SPLIT */
+        .report-page {
+            background-color: var(--bg-paper);
+            padding: 36px 45px;
+            margin-bottom: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+            border: 1px solid var(--border-light);
+            page-break-after: always;
+            break-after: page;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .report-page:last-child {
+            page-break-after: auto;
+            break-after: auto;
+            margin-bottom: 0;
+        }
+
+        /* HEADER BANNER — INSTITUTIONAL EXECUTIVE BRIEFING */
+        .header-classification {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+            border-bottom: 1.5px solid var(--primary-navy);
+            position: relative;
+        }
+
+        .header-classification::after {
+            content: '';
+            position: absolute;
+            bottom: -2.5px;
+            left: 0;
+            width: 44px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .header-brand-block {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-badge {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            padding: 3.5px 9px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .classification-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #991b1b;
+            text-transform: uppercase;
+        }
+
+        .classification-tag .dot {
+            width: 5px;
+            height: 5px;
+            background-color: #dc2626;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .doc-meta {
+            font-family: 'Inter', sans-serif;
+            font-size: 9.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .doc-meta .meta-divider {
+            color: var(--border-medium);
+        }
+
+        .title-block h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.25;
+            margin-bottom: 3px;
+        }
+
+        .title-block .subtitle {
+            font-size: 13.5px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background-color: #f8fafc;
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 16px;
+        }
+
+        .meta-item .label {
+            font-size: 9.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 1px;
+        }
+
+        .meta-item .value {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        /* SECTION HEADERS */
+        h2.section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-navy);
+            border-bottom: 1.5px solid var(--border-medium);
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        h2.section-title .pillar-tag {
+            background-color: var(--primary-navy);
+            color: #fff;
+            font-size: 9.5px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        h3.subsection-title {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--secondary-navy);
+            margin-top: 10px;
+            margin-bottom: 5px;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        p {
+            font-size: 12px;
+            color: #334155;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* ANALOGI / INTUISI ORANG AWAM BOX */
+        .analogy-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 3.5px solid var(--success-emerald);
+            padding: 9px 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .analogy-box .analogy-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #166534;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .analogy-box p {
+            font-size: 11.5px;
+            color: #14532d;
+            margin-bottom: 0;
+            line-height: 1.45;
+        }
+
+        /* KPI STAT CARDS */
+        .kpi-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 12px 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .kpi-card {
+            background: #fff;
+            border: 1px solid var(--border-light);
+            border-top: 3.5px solid var(--primary-navy);
+            padding: 10px 12px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .kpi-card.gold { border-top-color: var(--accent-gold); }
+        .kpi-card.emerald { border-top-color: var(--success-emerald); }
+        .kpi-card.crimson { border-top-color: var(--danger-crimson); }
+
+        .kpi-card .kpi-label {
+            font-size: 9.5px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+
+        .kpi-card .kpi-value {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .kpi-card .kpi-subtext {
+            font-size: 10px;
+            color: var(--text-muted);
+            line-height: 1.25;
+        }
+
+        /* WATERFALL CONTAINER */
+        .waterfall-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding: 14px 18px;
+            border-radius: 7px;
+            margin: 12px 0 14px 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .waterfall-box h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12.5px;
+            color: #fcd34d;
+            margin-bottom: 8px;
+        }
+
+        .waterfall-flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            text-align: center;
+        }
+
+        .waterfall-step {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .waterfall-step.result {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: #10b981;
+        }
+
+        .waterfall-step .step-title {
+            font-size: 9px;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .waterfall-step .step-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* EDITORIAL TABLES */
+        table.editorial-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10.5px;
+            margin: 6px 0 10px 0;
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        table.editorial-table th {
+            background-color: #f8fafc;
+            color: var(--primary-navy);
+            font-weight: 700;
+            text-align: left;
+            padding: 5px 8px;
+            border-bottom: 1.5px solid var(--border-medium);
+            text-transform: uppercase;
+            font-size: 9.5px;
+            letter-spacing: 0.5px;
+        }
+
+        table.editorial-table td {
+            padding: 4.5px 8px;
+            border-bottom: 1px solid var(--border-light);
+            color: #334155;
+        }
+
+        table.editorial-table tr:nth-child(even) td {
+            background-color: #fdfdfe;
+        }
+
+        table.editorial-table td.num, table.editorial-table th.num {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        table.editorial-table td.bold {
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        /* HEATMAP TABLE */
+        table.heatmap-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9.5px;
+            margin: 6px 0 10px 0;
+            font-family: 'JetBrains Mono', monospace;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        table.heatmap-table th {
+            background-color: var(--primary-navy);
+            color: #fff;
+            padding: 5px 3px;
+            font-size: 9px;
+            text-align: center;
+        }
+
+        table.heatmap-table td {
+            padding: 4.5px 2px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            font-weight: 600;
+        }
+
+        .heat-100 { background-color: #065f46; color: #fff; }
+        .heat-high { background-color: #047857; color: #fff; }
+        .heat-mid-high { background-color: #10b981; color: #fff; }
+        .heat-mid { background-color: #6ee7b7; color: #064e3b; }
+        .heat-low { background-color: #a7f3d0; color: #064e3b; }
+        .heat-none { background-color: #f8fafc; color: #94a3b8; }
+
+        /* STATUS BADGES */
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-danger { background-color: #fee2e2; color: #991b1b; }
+        .badge-warning { background-color: #fef3c7; color: #92400e; }
+        .badge-success { background-color: #d1fae5; color: #065f46; }
+
+        /* CALLOUT BOXES */
+        .callout-box {
+            background-color: #f8fafc;
+            border-left: 3.5px solid var(--accent-gold);
+            padding: 8px 12px;
+            border-radius: 0 4px 4px 0;
+            margin: 8px 0;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .callout-box .callout-title {
+            font-weight: 700;
+            font-size: 11px;
+            color: var(--primary-navy);
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .callout-box p {
+            font-size: 11.5px;
+            margin-bottom: 0;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* PRINT FOOTER */
+        .page-footer {
+            margin-top: 14px;
+            padding-top: 6px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            font-size: 9.5px;
+            color: var(--text-muted);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        /* PRINT MEDIA RULES — PRECISE PER-PAGE ZERO SPLIT */
+        @page {
+            size: A4 portrait;
+            margin: 8mm 12mm;
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+                margin: 0;
+            }
+            .document-wrapper {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .report-page {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 4mm 2mm !important;
+                margin: 0 !important;
+                border-radius: 0 !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                page-break-after: always !important;
+                break-after: page !important;
+                box-sizing: border-box !important;
+            }
+            .report-page:last-child {
+                page-break-after: auto !important;
+                break-after: auto !important;
+            }
+            h1, h2, h3, .section-title, .subsection-title {
+                break-after: avoid !important;
+                page-break-after: avoid !important;
+            }
+            table, .editorial-table, .heatmap-table, .kpi-cards-grid, .waterfall-box, .callout-box, .analogy-box {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="document-wrapper">
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 1: COVER, RINGKASAN EKSEKUTIF, SCORECARD, & P&L WATERFALL BRIDGE           -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <div class="header-classification">
+            <div class="header-brand-block">
+                <span class="brand-badge">MEMORANDUM STRATEGIS</span>
+                <span class="classification-tag"><span class="dot"></span> INTERNAL MANAJEMEN & DIREKSI</span>
+            </div>
+            <div class="doc-meta">
+                <span>TAHUN BUKU 2024</span>
+                <span class="meta-divider">•</span>
+                <span>AUDIT KINERJA RITEL OMNICHANNEL</span>
+            </div>
+        </div>
+
+        <div class="title-block">
+            <h1>Omnichannel Retail & Supply Chain Performance Engine</h1>
+            <div class="subtitle">Laporan Bisnis Strategis Manajemen: Audit Operasional & Penyelamatan Laba Bersih Tahun 2024</div>
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-item">
+                <div class="label">Penyusun Dokumen</div>
+                <div class="value">Fajar Setyadi</div>
+                <div style="font-size: 10px; color: var(--text-muted); margin-top: 1px; font-weight: 500;">Data Analyst & Business Intelligence</div>
+                <div style="font-size: 9.5px; margin-top: 3px; display: flex; flex-direction: column; gap: 1px;">
+                    <a href="mailto:Fajarsetyadilucky@gmail.com" style="color: #0284c7; text-decoration: none; font-weight: 500;">Fajarsetyadilucky@gmail.com</a>
+                    <a href="https://wa.me/6289630527099" style="color: #059669; text-decoration: none; font-weight: 600;">+62 896-3052-7099</a>
+                </div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Target Audiens</div>
+                <div class="value">Jajaran Manajemen & Direksi</div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Periode Analisis</div>
+                <div class="value">Tahun Penuh 2024 (366 Hari)</div>
+            </div>
+            <div class="meta-item">
+                <div class="label">Basis Data Audit</div>
+                <div class="value">609.769 Baris Data Terverifikasi</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">
+            <span class="pillar-tag">EXECUTIVE SUMMARY</span>
+            Ringkasan Masalah & Potensi Penyelamatan Kas Rp 3,53 Miliar
+        </h2>
+
+        <div class="analogy-box">
+            <div class="analogy-title">💡 Analogi Sederhana:</div>
+            <p>
+                <strong>Apa isi laporan ini?</strong> Bayangkan toko ritel kita kelihatannya ramai pembeli dan omzet penjualannya tembus ratusan miliar. Namun, di belakang layar ada <strong>dua lubang kebocoran kas senilai Rp 3,53 Miliar</strong> yang terjadi setiap hari: (1) Barang di rak toko sering macet dan tidak terjual karena stok fiktif di komputer, dan (2) Pabrik pemasok barang sering telat kirim, tapi denda keterlambatan kontraknya tidak pernah ditagih oleh tim kita. Laporan ini membuktikan masalah tersebut dengan data pasti dan memberikan solusi konkret untuk menyelamatkan laba bersih perusahaan.
+            </p>
+        </div>
+
+        <div class="kpi-cards-grid">
+            <div class="kpi-card crimson">
+                <div class="kpi-label">Kebocoran Stok Siluman</div>
+                <div class="kpi-value">Rp 2,22 M</div>
+                <div class="kpi-subtext">Omzet lenyap akibat barang fiktif di rak kasir</div>
+            </div>
+            <div class="kpi-card emerald">
+                <div class="kpi-label">Piutang Denda Vendor</div>
+                <div class="kpi-value">Rp 1,32 M</div>
+                <div class="kpi-subtext">Hak uang denda keterlambatan 1.153 hari</div>
+            </div>
+            <div class="kpi-card gold">
+                <div class="kpi-label">Efisiensi Dark Store</div>
+                <div class="kpi-value">Rp 31,8 Jt/m²</div>
+                <div class="kpi-subtext">8,6x lipat lebih produktif dibanding Mega DC</div>
+            </div>
+            <div class="kpi-card emerald">
+                <div class="kpi-label">Pertumbuhan Nilai Pelanggan</div>
+                <div class="kpi-value">8,5x Lipat</div>
+                <div class="kpi-subtext">Pelanggan setia melonjak belanja ke Rp 1,58 Jt</div>
+            </div>
+        </div>
+
+        <div class="waterfall-box">
+            <h3>Jembatan Dampak Laba Bersih EBITDA (P&L EBITDA Recovery Waterfall):</h3>
+            <div class="waterfall-flow">
+                <div class="waterfall-step">
+                    <div class="step-title">1. Klaim Denda Vendor</div>
+                    <div class="step-val">+Rp 1,32 Miliar</div>
+                </div>
+                <div class="waterfall-step">
+                    <div class="step-title">2. Pemulihan Omzet Rak</div>
+                    <div class="step-val">+Rp 2,22 Miliar</div>
+                </div>
+                <div class="waterfall-step">
+                    <div class="step-title">3. Margin Kotor (23,2%)</div>
+                    <div class="step-val">+Rp 515 Juta</div>
+                </div>
+                <div class="waterfall-step">
+                    <div class="step-title">4. Biaya Sistem & Kru</div>
+                    <div class="step-val">-Rp 100 Juta</div>
+                </div>
+                <div class="waterfall-step result">
+                    <div class="step-title">NET EBITDA LIFT 2025</div>
+                    <div class="step-val">+Rp 1,735 Miliar</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <div>Omnichannel Retail Performance Engine — Halaman 1 dari 6</div>
+            <div>Disusun oleh: Fajar Setyadi | ✉️ Fajarsetyadilucky@gmail.com | 📞 +62 896-3052-7099</div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 2: PILAR 1 — ERADIKASI GHOST STOCKOUT (STOK SILUMAN)                       -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <h2 class="section-title">
+            <span class="pillar-tag">PILAR 1</span>
+            Eradikasi Ghost Stockout: Menutup Kerugian Omzet Rp 2,22 Miliar
+        </h2>
+
+        <div class="analogy-box">
+            <div class="analogy-title">💡 Analogi Sederhana:</div>
+            <p>
+                <strong>Apa itu Ghost Stockout (Stok Siluman)?</strong> Bayangkan Anda ke minimarket mau beli buah segar atau sabun mandi. Di komputer kasir tertulis stok masih ada 45 buah. Tapi saat dicari di rak, raknya <em>kosong melompong</em>! Ternyata barangnya sudah busuk, salah taruh di gudang belakang, atau dicuri. Anda batal beli, kasir nol transaksi, dan komputer tidak pernah pesan barang baru ke pabrik karena merasa stoknya masih banyak. Akibat masalah ini, toko kita rugi omzet Rp 2,22 Miliar dalam setahun!
+            </p>
+        </div>
+
+        <p>
+            Berdasarkan pelacakan data pada 263.520 log stok harian, terdeteksi <strong>14.514 insiden rak macet</strong> (&ge; 3 hari berturut-turut) dengan <strong>117.617 hari rak terbengkalai</strong> dan <strong>96.103 unit barang gagal terjual</strong>.
+        </p>
+
+        <h3 class="subsection-title">Tabel 1.1: Kerugian Omzet Berdasarkan Kategori Barang</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Kategori Produk</th>
+                    <th class="num">Insiden</th>
+                    <th class="num">Hari Macet</th>
+                    <th class="num">Barang Gagal Jual</th>
+                    <th class="num">Omzet Hilang (IDR)</th>
+                    <th class="num">Porsi Rugi</th>
+                    <th>Tingkat Bahaya</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">Fresh Produce (Sayur & Buah Segar)</td>
+                    <td class="num">1.497</td>
+                    <td class="num">20.197</td>
+                    <td class="num">17.296 unit</td>
+                    <td class="num bold" style="color: #dc2626;">Rp 647.870.879</td>
+                    <td class="num bold">29,23%</td>
+                    <td><span class="badge badge-danger">SANGAT KRITIS 🔴</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">Personal Care (Perawatan Tubuh)</td>
+                    <td class="num">1.321</td>
+                    <td class="num">20.406</td>
+                    <td class="num">15.368 unit</td>
+                    <td class="num bold">Rp 423.395.956</td>
+                    <td class="num">19,10%</td>
+                    <td><span class="badge badge-warning">TINGGI 🟠</span></td>
+                </tr>
+                <tr>
+                    <td>Home Care (Pembersih Rumah)</td>
+                    <td class="num">1.349</td>
+                    <td class="num">19.543</td>
+                    <td class="num">15.560 unit</td>
+                    <td class="num">Rp 370.395.212</td>
+                    <td class="num">16,71%</td>
+                    <td><span class="badge badge-warning">SEDANG 🟡</span></td>
+                </tr>
+                <tr>
+                    <td>Packaged Food (Makanan Kemasan)</td>
+                    <td class="num">1.767</td>
+                    <td class="num">24.709</td>
+                    <td class="num">20.585 unit</td>
+                    <td class="num">Rp 359.359.752</td>
+                    <td class="num">16,21%</td>
+                    <td><span class="badge badge-warning">SEDANG 🟡</span></td>
+                </tr>
+                <tr>
+                    <td>Dairy & Chilled (Susu & Minuman Dingin)</td>
+                    <td class="num">1.185</td>
+                    <td class="num">16.921</td>
+                    <td class="num">13.444 unit</td>
+                    <td class="num">Rp 274.366.229</td>
+                    <td class="num">12,38%</td>
+                    <td><span class="badge badge-success">AMAN 🟢</span></td>
+                </tr>
+                <tr>
+                    <td>Beverages (Minuman Ringan)</td>
+                    <td class="num">1.217</td>
+                    <td class="num">15.836</td>
+                    <td class="num">13.850 unit</td>
+                    <td class="num">Rp 140.985.545</td>
+                    <td class="num">6,36%</td>
+                    <td><span class="badge badge-success">AMAN 🟢</span></td>
+                </tr>
+                <tr style="background-color: #f1f5f9; font-weight: 700;">
+                    <td>TOTAL KERUGIAN NASIONAL</td>
+                    <td class="num">14.514</td>
+                    <td class="num">117.617</td>
+                    <td class="num">96.103 unit</td>
+                    <td class="num bold" style="color: #dc2626;">Rp 2.216.373.573</td>
+                    <td class="num">100,00%</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-title">Tabel 1.2: Top 5 Toko/Hub Cabang dengan Kebocoran Terparah</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Nama Cabang & Hub</th>
+                    <th>Kota / Wilayah</th>
+                    <th class="num">Hari Macet</th>
+                    <th class="num">Insiden</th>
+                    <th class="num">Omzet Hilang (IDR)</th>
+                    <th>Urgensi Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">STR-003</td>
+                    <td>Hub Puri Kencana</td>
+                    <td>Jakarta Barat</td>
+                    <td class="num">11.361</td>
+                    <td class="num">1.779</td>
+                    <td class="num bold">Rp 121.763.128</td>
+                    <td><span class="badge badge-danger">Audit Darurat Hari 1 🚨</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">STR-008</td>
+                    <td>Hub Karawaci Central</td>
+                    <td>Tangerang</td>
+                    <td class="num">10.515</td>
+                    <td class="num">1.772</td>
+                    <td class="num bold">Rp 121.064.557</td>
+                    <td><span class="badge badge-danger">Audit Darurat Hari 1 🚨</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">STR-007</td>
+                    <td>Hub Bintaro Sektor 9</td>
+                    <td>Tangerang Selatan</td>
+                    <td class="num">10.788</td>
+                    <td class="num">1.758</td>
+                    <td class="num">Rp 119.764.748</td>
+                    <td><span class="badge badge-warning">Audit Minggu ke-2 ⚠️</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">STR-012</td>
+                    <td>Hub Bogor Pajajaran</td>
+                    <td>Bogor</td>
+                    <td class="num">9.389</td>
+                    <td class="num">1.766</td>
+                    <td class="num">Rp 118.280.414</td>
+                    <td><span class="badge badge-warning">Audit Minggu ke-2 ⚠️</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">STR-010</td>
+                    <td>Hub Cibubur Junction</td>
+                    <td>Depok</td>
+                    <td class="num">11.750</td>
+                    <td class="num">1.771</td>
+                    <td class="num">Rp 115.080.750</td>
+                    <td><span class="badge badge-warning">Audit Minggu ke-2 ⚠️</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer">
+            <div>Omnichannel Retail Performance Engine — Halaman 2 dari 6</div>
+            <div>Pilar 1: Eradikasi Ghost Stockout & Kebocoran Omzet</div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 3: PILAR 2 — TATA KELOLA PEMASOK & KLAIM DENDA VENDOR RP 1,32 MILIAR        -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <h2 class="section-title">
+            <span class="pillar-tag">PILAR 2</span>
+            Tata Kelola Pemasok: Klaim Denda Keterlambatan Vendor Rp 1,32 Miliar
+        </h2>
+
+        <div class="analogy-box">
+            <div class="analogy-title">💡 Analogi Sederhana:</div>
+            <p>
+                <strong>Bagaimana uang denda ini bisa ada?</strong> Ketika kita memesan barang dalam jumlah besar ke pabrik (seperti Unilever atau Wings), ada surat kontrak kerja sama: <em>"Pabrik wajib mengantar barang tepat waktu dalam 3 hari. Jika terlambat, pabrik wajib membayar denda harian (1,5% - 3% per hari) dari total nilai pesanan."</em> Sepanjang 2024, para pabrik ini telat sebanyak 1.153 hari. Denda sah yang terkumpul mencapai <strong>Rp 1,32 Miliar</strong>. Tapi selama ini perusahaan kita lupa menagihnya! Uang ini adalah uang kas sah milik kita yang tertidur di vendor.
+            </p>
+        </div>
+
+        <p>
+            Sepanjang 2024, perusahaan menerbitkan <strong>8.000 pesanan pengadaan (PO)</strong> senilai <strong>Rp 113,88 Miliar</strong> kepada 15 pabrik prinsipal FMCG. Rata-rata ketepatan waktu mencapai 94,76%, namun 419 pesanan terlambat hingga memicu kekosongan stok gudang.
+        </p>
+
+        <h3 class="subsection-title">Tabel 2.1: Top 5 Vendor Penyumbang Denda Keterlambatan Terbesar</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Nama Pabrik / Vendor</th>
+                    <th>Kategori Barang</th>
+                    <th class="num">Ketepatan SLA</th>
+                    <th class="num">Hari Telat</th>
+                    <th class="num">Total Nilai Pesanan</th>
+                    <th class="num">Hak Denda Perusahaan</th>
+                    <th>Status Kepatuhan Kontrak</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">1</td>
+                    <td class="bold">PT Wings Surya (Wings Group)</td>
+                    <td>Sabun & Kebutuhan Rumah</td>
+                    <td class="num">94,74%</td>
+                    <td class="num">124 hari</td>
+                    <td class="num">Rp 7,85 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 132.690.000</td>
+                    <td><span class="badge badge-success">Volume Tinggi (Telat Wajar)</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">2</td>
+                    <td class="bold">PT Unilever Indonesia Tbk</td>
+                    <td>Perawatan Tubuh & Sampo</td>
+                    <td class="num">94,77%</td>
+                    <td class="num">96 hari</td>
+                    <td class="num">Rp 7,90 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 121.440.000</td>
+                    <td><span class="badge badge-warning">Melanggar Target SLA 95%</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">3</td>
+                    <td class="bold">PT Orang Tua Group (OT)</td>
+                    <td>Makanan & Minuman</td>
+                    <td class="num">94,74%</td>
+                    <td class="num">106 hari</td>
+                    <td class="num">Rp 7,85 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 108.030.000</td>
+                    <td><span class="badge badge-warning">Melanggar Target SLA 95%</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">4</td>
+                    <td class="bold">PT Garudafood Putra Putri Jaya</td>
+                    <td>Kacang & Biskuit</td>
+                    <td class="num">94,76%</td>
+                    <td class="num">96 hari</td>
+                    <td class="num">Rp 7,61 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 105.690.000</td>
+                    <td><span class="badge badge-warning">Melanggar Target SLA 95%</span></td>
+                </tr>
+                <tr>
+                    <td class="bold">5</td>
+                    <td class="bold">PT Mayora Indah Tbk</td>
+                    <td>Kopi, Biskuit, Cokelat</td>
+                    <td class="num">94,62%</td>
+                    <td class="num">96 hari</td>
+                    <td class="num">Rp 7,95 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 104.850.000</td>
+                    <td><span class="badge badge-warning">Melanggar Target SLA 95%</span></td>
+                </tr>
+                <tr style="background-color: #f1f5f9; font-weight: 700;">
+                    <td colspan="4">TOTAL KLAIM DENDA (15 VENDOR LENGKAP)</td>
+                    <td class="num">1.153 hari</td>
+                    <td class="num">Rp 113,88 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 1.316.149.000</td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout-box">
+            <div class="callout-title">💰 Instruksi Aksi Tim Finance (CFO Action):</div>
+            <p>
+                Kita <strong>tidak perlu menuntut ke pengadilan</strong>. Cukup terbitkan surat resmi <strong>Nota Debit (Debit Note)</strong> kepada 15 pabrik tersebut. Saat kita membayar tagihan faktur belanja berikutnya, langsung potong sebesar <strong>Rp 1,32 Miliar</strong>. Uang kas perusahaan langsung aman dan likuid seketika!
+            </p>
+        </div>
+
+        <div class="page-footer">
+            <div>Omnichannel Retail Performance Engine — Halaman 3 dari 6</div>
+            <div>Pilar 2: Tata Kelola Pemasok & Klaim Denda Kontrak</div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 4: PILAR 3 — PROFITABILITAS KANAL & FORMAT DARK STORE                      -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <h2 class="section-title">
+            <span class="pillar-tag">PILAR 3</span>
+            Kanal Penjualan & Keunggulan Format Dark Store
+        </h2>
+
+        <div class="analogy-box">
+            <div class="analogy-title">💡 Analogi Sederhana:</div>
+            <p>
+                <strong>Apa itu Dark Store dan kenapa lebih menguntungkan?</strong> Banyak orang mengira punya toko besar mewah di mal adalah jalan terbaik. Padahal sewa mal sangat mahal! Sebaliknya, <strong>Dark Store</strong> adalah toko mini di perumahan yang tertutup untuk pembeli jalan kaki. Isinya 100% rak barang padat khusus melayani kurir ojol pesanan online. Hasilnya luar biasa: tiap 1 meter persegi ruangnya bisa menghasilkan <strong>omzet Rp 31,8 juta</strong>—artinya <strong>8,6 kali lebih produktif</strong> dibanding gudang raksasa di pinggiran tol, dan 85% pesanan sampai ke tangan pembeli dalam waktu di bawah 30 menit!
+            </p>
+        </div>
+
+        <h3 class="subsection-title">Tabel 3.1: Keuntungan Bersih per Kanal Belanja (Unit Economics)</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Kanal Belanja</th>
+                    <th class="num">Jumlah Pesanan</th>
+                    <th class="num">Rata-rata Belanja</th>
+                    <th class="num">Margin Barang</th>
+                    <th class="num">Diskon Promo</th>
+                    <th class="num">Keuntungan Bersih %</th>
+                    <th>Peran Bisnis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">Aplikasi HP (Mobile App)</td>
+                    <td class="num">51.689</td>
+                    <td class="num">Rp 90.136</td>
+                    <td class="num">23,25%</td>
+                    <td class="num">0,70%</td>
+                    <td class="num bold" style="color: #059669;">31,66%</td>
+                    <td>Kanal utama penyumbang order terbanyak</td>
+                </tr>
+                <tr>
+                    <td class="bold">Website</td>
+                    <td class="num">14.251</td>
+                    <td class="num">Rp 90.836</td>
+                    <td class="num">23,23%</td>
+                    <td class="num">0,70%</td>
+                    <td class="num bold" style="color: #059669;">31,49%</td>
+                    <td>Pembeli terencana dengan keranjang stabil</td>
+                </tr>
+                <tr>
+                    <td class="bold">Quick Commerce Instan (&lt;30 mnt)</td>
+                    <td class="num">9.482</td>
+                    <td class="num bold">Rp 91.349</td>
+                    <td class="num">23,23%</td>
+                    <td class="num">0,70%</td>
+                    <td class="num bold" style="color: #059669;">31,48%</td>
+                    <td>Belanja cepat dengan nilai belanja tertinggi</td>
+                </tr>
+                <tr>
+                    <td class="bold">Kasir Toko Fisik (In-Store POS)</td>
+                    <td class="num">18.647</td>
+                    <td class="num">Rp 80.525</td>
+                    <td class="num">23,25%</td>
+                    <td class="num">0,71%</td>
+                    <td class="num">22,70%</td>
+                    <td>Margin murni barang tanpa ongkos kirim</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-title">Tabel 3.2: Produktivitas Ruang (Omzet per Meter Persegi)</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Format Toko / Gudang</th>
+                    <th>Contoh Cabang</th>
+                    <th class="num">Luas Ruang</th>
+                    <th class="num">Omzet Setahun</th>
+                    <th class="num">Omzet / m²</th>
+                    <th>Tingkat Efisiensi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">Dark Store (Mini Khusus Online)</td>
+                    <td>Hub Puri Kencana (STR-003)</td>
+                    <td class="num">350 m²</td>
+                    <td class="num">Rp 11,13 Miliar</td>
+                    <td class="num bold" style="color: #059669;">Rp 31,80 Juta / m²</td>
+                    <td>⭐⭐⭐⭐⭐ Paling Lincah & Untung (8,6x)</td>
+                </tr>
+                <tr>
+                    <td class="bold">Express Urban Hub</td>
+                    <td>Hub Cibubur Junction (STR-010)</td>
+                    <td class="num">450 m²</td>
+                    <td class="num">Rp 11,09 Miliar</td>
+                    <td class="num bold">Rp 24,65 Juta / m²</td>
+                    <td>⭐⭐⭐⭐ Sangat Efisien</td>
+                </tr>
+                <tr>
+                    <td>Toko Fisik Flagship</td>
+                    <td>Hub Kelapa Gading (STR-002)</td>
+                    <td class="num">1.200 m²</td>
+                    <td class="num">Rp 11,04 Miliar</td>
+                    <td class="num">Rp 9,20 Juta / m²</td>
+                    <td>⭐⭐ Terbebani lorong jalan pembeli</td>
+                </tr>
+                <tr>
+                    <td>Mega Gudang Besar (DC)</td>
+                    <td>Cakung Mega DC (STR-005)</td>
+                    <td class="num">5.000 m²</td>
+                    <td class="num">Rp 18,40 Miliar</td>
+                    <td class="num">Rp 3,68 Juta / m²</td>
+                    <td>⭐ Gudang logistik induk</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer">
+            <div>Omnichannel Retail Performance Engine — Halaman 4 dari 6</div>
+            <div>Pilar 3: Profitabilitas Kanal & Efisiensi Dark Store</div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 5: PILAR 4 — NILAI PELANGGAN & MATRIKS SEGITIGA RETENSI                    -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <h2 class="section-title">
+            <span class="pillar-tag">PILAR 4</span>
+            Multiplikasi Nilai Pelanggan & Matriks Retensi Kohort
+        </h2>
+
+        <div class="analogy-box">
+            <div class="analogy-title">💡 Analogi Sederhana:</div>
+            <p>
+                <strong>Kenapa merawat pelanggan lama jauh lebih untung?</strong> Dari 100 orang baru yang belanja di toko kita pada Januari, wajar jika sekitar 44 orang tidak belanja lagi (biasanya cuma pemburu promo gratisan). Tapi lihat keajaibannya: <strong>56 orang yang kembali di bulan kedua ternyata terus belanja setia tiap bulan sampai Desember!</strong> Nilai belanja mereka melonjak dari Rp 184 ribu di awal menjadi <strong>Rp 1,58 juta di akhir tahun (naik 8,5 kali lipat)</strong>. Pesan untuk direksi: jangan terus buang uang miliaran untuk iklan menjaring pembeli baru, rawatlah pelanggan yang sudah ada!
+            </p>
+        </div>
+
+        <h3 class="subsection-title">Tabel 4.1: Matriks Segitiga Retensi Pelanggan (Triangular Retention Matrix M0 s/d M11)</h3>
+        <p style="font-size: 10px; margin-bottom: 5px; color: var(--text-muted);">
+            *Warna hijau pekat menandakan retensi pelanggan tinggi (&ge; 55%), warna hijau muda menandakan retensi stabil (38% - 50%).
+        </p>
+        <table class="heatmap-table">
+            <thead>
+                <tr>
+                    <th>Bulan Masuk</th>
+                    <th>Jumlah Orang</th>
+                    <th>Bulan 0</th>
+                    <th>Bulan 1</th>
+                    <th>Bulan 2</th>
+                    <th>Bulan 3</th>
+                    <th>Bulan 4</th>
+                    <th>Bulan 5</th>
+                    <th>Bulan 6</th>
+                    <th>Bulan 7</th>
+                    <th>Bulan 8</th>
+                    <th>Bulan 9</th>
+                    <th>Bulan 10</th>
+                    <th>Bulan 11</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight:700;">2024-01</td>
+                    <td style="font-weight:700;">1.155 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-mid-high">55.9%</td>
+                    <td class="heat-high">58.4%</td>
+                    <td class="heat-high">58.4%</td>
+                    <td class="heat-high">59.9%</td>
+                    <td class="heat-high">58.7%</td>
+                    <td class="heat-100">60.2%</td>
+                    <td class="heat-high">58.4%</td>
+                    <td class="heat-high">58.3%</td>
+                    <td class="heat-high">59.1%</td>
+                    <td class="heat-high">57.7%</td>
+                    <td class="heat-100">60.3%</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-02</td>
+                    <td>763 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-mid">46.5%</td>
+                    <td class="heat-mid">47.6%</td>
+                    <td class="heat-mid">45.0%</td>
+                    <td class="heat-mid">46.7%</td>
+                    <td class="heat-mid">46.3%</td>
+                    <td class="heat-mid-high">49.1%</td>
+                    <td class="heat-mid-high">49.7%</td>
+                    <td class="heat-mid">45.5%</td>
+                    <td class="heat-mid-high">49.7%</td>
+                    <td class="heat-mid">48.1%</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-03</td>
+                    <td>777 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">41.6%</td>
+                    <td class="heat-low">42.0%</td>
+                    <td class="heat-low">41.8%</td>
+                    <td class="heat-mid">44.5%</td>
+                    <td class="heat-low">43.0%</td>
+                    <td class="heat-low">41.2%</td>
+                    <td class="heat-low">39.0%</td>
+                    <td class="heat-low">43.9%</td>
+                    <td class="heat-low">42.2%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-04</td>
+                    <td>800 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">43.8%</td>
+                    <td class="heat-low">41.1%</td>
+                    <td class="heat-low">40.8%</td>
+                    <td class="heat-low">41.8%</td>
+                    <td class="heat-mid">44.4%</td>
+                    <td class="heat-low">41.1%</td>
+                    <td class="heat-low">42.9%</td>
+                    <td class="heat-low">40.1%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-05</td>
+                    <td>821 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">40.0%</td>
+                    <td class="heat-low">40.7%</td>
+                    <td class="heat-low">39.0%</td>
+                    <td class="heat-low">41.8%</td>
+                    <td class="heat-low">38.9%</td>
+                    <td class="heat-low">40.4%</td>
+                    <td class="heat-low">39.0%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-06</td>
+                    <td>765 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">43.4%</td>
+                    <td class="heat-low">42.9%</td>
+                    <td class="heat-low">39.2%</td>
+                    <td class="heat-low">40.3%</td>
+                    <td class="heat-low">41.0%</td>
+                    <td class="heat-low">39.6%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-07</td>
+                    <td>729 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">41.3%</td>
+                    <td class="heat-low">40.6%</td>
+                    <td class="heat-low">40.9%</td>
+                    <td class="heat-low">38.5%</td>
+                    <td class="heat-low">40.3%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-08</td>
+                    <td>731 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">39.5%</td>
+                    <td class="heat-low">40.5%</td>
+                    <td class="heat-low">38.4%</td>
+                    <td class="heat-low">36.8%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-09</td>
+                    <td>746 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">38.9%</td>
+                    <td class="heat-low">35.8%</td>
+                    <td class="heat-low">38.7%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-10</td>
+                    <td>748 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">38.9%</td>
+                    <td class="heat-low">35.6%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-11</td>
+                    <td>763 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-low">39.8%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:700;">2024-12</td>
+                    <td>132 org</td>
+                    <td class="heat-100">100%</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                    <td class="heat-none">—</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout-box">
+            <div class="callout-title">🎯 Hitungan Balik Modal (ROI Marketing):</div>
+            <p>
+                Jika kita memberi voucher gratis ongkir senilai <strong>Rp 25.000</strong> kepada pembeli baru agar mereka mau belanja lagi di bulan kedua, pengembalian uang belanja yang mereka hasilkan sepanjang tahun mencapai <strong>Rp 960.000 s/d Rp 1.580.000</strong>. Itu artinya keuntungan balik modalnya mencapai <strong>38 kali lipat</strong>!
+            </p>
+        </div>
+
+        <div class="page-footer">
+            <div>Omnichannel Retail Performance Engine — Halaman 5 dari 6</div>
+            <div>Pilar 4: Nilai Pelanggan & Matriks Segitiga Retensi</div>
+        </div>
+    </div>
+
+
+    <!-- ================================================================================== -->
+    <!-- HALAMAN 6: RENCANA AKSI 30-60-90 HARI & MATRIKS RACI TATA KELOLA                  -->
+    <!-- ================================================================================== -->
+    <div class="report-page">
+        <h2 class="section-title">
+            <span class="pillar-tag">ACTION PLAN</span>
+            Rencana Aksi 30-60-90 Hari & Pembagian Tugas Direksi
+        </h2>
+
+        <p>
+            Berikut adalah langkah nyata yang harus dijalankan oleh jajaran direksi dalam 90 hari ke depan untuk mengamankan tambahan EBITDA sebesar <strong>+Rp 1,735 Miliar</strong>:
+        </p>
+
+        <h3 class="subsection-title">Tabel 5.1: Rencana Aksi 30-60-90 Hari Direksi</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Waktu Pelaksanaan</th>
+                    <th>Tim Penanggung Jawab</th>
+                    <th>Langkah Aksi Konkret</th>
+                    <th>Hasil & Dampak Finansial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold" style="color: #dc2626;">Bulan 1 (30 Hari Pertama)</td>
+                    <td>Keuangan (Finance & CFO)</td>
+                    <td>Terbitkan surat Nota Debit denda penalti ke 15 vendor pabrik FMCG</td>
+                    <td class="bold" style="color: #059669;">Kas Masuk Tunai: +Rp 1,32 Miliar</td>
+                </tr>
+                <tr>
+                    <td class="bold" style="color: #dc2626;">Bulan 1 (30 Hari Pertama)</td>
+                    <td>Operasional Toko (COO)</td>
+                    <td>Cek fisik darurat rak Sayur & Buah Segar di 5 cabang paling bocor</td>
+                    <td>Hapus barang busuk dari pembukuan komputer</td>
+                </tr>
+                <tr>
+                    <td class="bold" style="color: #d97706;">Bulan 2 (Hari 31 s/d 60)</td>
+                    <td>Tim IT & Data Engine</td>
+                    <td>Pasang alarm otomatis jam 05.00 pagi ke tablet kepala toko jika ada stok macet</td>
+                    <td>Cegah stok siluman terulang lagi di masa depan</td>
+                </tr>
+                <tr>
+                    <td class="bold" style="color: #d97706;">Bulan 2 (Hari 31 s/d 60)</td>
+                    <td>Pengadaan (Procurement)</td>
+                    <td>Perbarui kontrak kerja sama 2025: target tepat waktu dinaikkan ke 97%</td>
+                    <td>Pabrik tidak berani telat kirim di akhir tahun</td>
+                </tr>
+                <tr>
+                    <td class="bold" style="color: #059669;">Bulan 3 (Hari 61 s/d 90)</td>
+                    <td>Ekspansi & Properti</td>
+                    <td>Gunakan uang modal untuk buka 3 Dark Store mini baru di perumahan</td>
+                    <td>Lipat gandakan omzet ruang 8,6x lebih cepat</td>
+                </tr>
+                <tr>
+                    <td class="bold" style="color: #059669;">Bulan 3 (Hari 61 s/d 90)</td>
+                    <td>Pemasaran (Marketing)</td>
+                    <td>Kirim kupon otomatis di aplikasi HP pada hari ke-21 bagi pengguna baru</td>
+                    <td>Kunci pembeli agar setia belanja tiap bulan</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-title">Tabel 5.2: Matriks Tanggung Jawab Direksi (RACI Governance Matrix)</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>Inisiatif Strategis</th>
+                    <th style="text-align: center;">Direktur Utama (CEO)</th>
+                    <th style="text-align: center;">Direktur Operasional (COO)</th>
+                    <th style="text-align: center;">Direktur Keuangan (CFO)</th>
+                    <th style="text-align: center;">VP Logistik & Pasok</th>
+                    <th style="text-align: center;">Kepala Pemasaran (CMO)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">1. Klaim Uang Denda Vendor Rp 1,32 M</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center;">Konsultasi</td>
+                    <td style="text-align: center; font-weight: 700; color: #dc2626;">PENANGGUNG JAWAB UTAMA</td>
+                    <td style="text-align: center;">Pelaksana Teknis</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                </tr>
+                <tr>
+                    <td class="bold">2. Pasang Alarm Stok Siluman di Toko</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center; font-weight: 700; color: #dc2626;">PENANGGUNG JAWAB UTAMA</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center;">Pelaksana Teknis</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                </tr>
+                <tr>
+                    <td class="bold">3. Buka 3 Dark Store Mini Baru</td>
+                    <td style="text-align: center; font-weight: 700; color: #dc2626;">PENANGGUNG JAWAB UTAMA</td>
+                    <td style="text-align: center;">Pelaksana Teknis</td>
+                    <td style="text-align: center;">Konsultasi Anggaran</td>
+                    <td style="text-align: center;">Konsultasi Logistik</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                </tr>
+                <tr>
+                    <td class="bold">4. Rawat Pembeli Baru di Aplikasi</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center;">Konsultasi Anggaran</td>
+                    <td style="text-align: center;">Terima Laporan</td>
+                    <td style="text-align: center; font-weight: 700; color: #dc2626;">PENANGGUNG JAWAB UTAMA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 12px; padding: 10px 16px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+            <div>
+                <strong style="color: #0f172a;">Kontak Resmi Penyusun:</strong>
+                <span style="color: #334155; margin-left: 6px;"><strong>Fajar Setyadi</strong> (Data Analyst & Business Intelligence)</span>
+            </div>
+            <div style="font-weight: 500;">
+                <span style="margin-right: 14px; color: #0284c7;">✉️ <a href="mailto:Fajarsetyadilucky@gmail.com" style="color: #0284c7; text-decoration: none;">Fajarsetyadilucky@gmail.com</a></span>
+                <span style="color: #059669; font-weight: 600;">📞 <a href="https://wa.me/6289630527099" style="color: #059669; text-decoration: none;">+62 896-3052-7099</a></span>
+            </div>
+        </div>
+
+        <div class="page-footer" style="margin-top: 10px;">
+            <div>Omnichannel Retail Performance Engine — Halaman 6 dari 6 (SELESAI)</div>
+            <div>Disusun oleh: <strong>Fajar Setyadi</strong> | ✉️ Fajarsetyadilucky@gmail.com | 📞 +62 896-3052-7099</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
