@@ -257,7 +257,7 @@ html_en = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">1. Omnichannel Retail Supply Chain Analytics Engine</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine">[GitHub Repository ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine">[GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gmUye2pV">[LinkedIn Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Tech Stack: PostgreSQL 15+, Database Architecture, Partitioning, Composite Indexing, Query Optimization, Financial Forensics</div>
         <ul class="project-bullet-list">
@@ -272,7 +272,7 @@ html_en = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">2. Multi-Branch Retail F&amp;B Profitability &amp; Root-Cause Optimization</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">[GitHub Repository ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">[GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gqEzfWWs">[LinkedIn Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Tech Stack: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistical Z-Score Root-Cause, Executive Dashboard</div>
         <ul class="project-bullet-list">
@@ -286,7 +286,7 @@ html_en = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">3. Predictive Investment Feasibility &amp; SaaS Unit Economics Modeling</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">[GitHub Repository ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">[GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gkzRp5ky">[LinkedIn Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Tech Stack: Python (SciPy Monte Carlo 1,000 Runs), Streamlit App Simulator, Power BI, SaaS Unit Economics</div>
         <ul class="project-bullet-list">
@@ -392,7 +392,7 @@ html_id = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">1. Omnichannel Retail Supply Chain Analytics Engine</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine">[Repositori GitHub ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine">[Kode GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gmUye2pV">[Slide Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Teknologi: PostgreSQL 15+, Arsitektur Database, Partisi Tabel, Composite Indexing, Optimasi Kueri, Audit Forensik Finansial</div>
         <ul class="project-bullet-list">
@@ -407,7 +407,7 @@ html_id = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">2. Multi-Branch Retail F&amp;B Profitability &amp; Root-Cause Optimization</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">[Repositori GitHub ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">[Kode GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gqEzfWWs">[Slide Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Teknologi: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistik Root-Cause Z-Score, Dasbor Eksekutif</div>
         <ul class="project-bullet-list">
@@ -421,7 +421,7 @@ html_id = f"""<!DOCTYPE html>
     <div class="project-item">
         <div class="project-header-row">
             <span class="project-title">3. Predictive Investment Feasibility &amp; SaaS Unit Economics Modeling</span>
-            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">[Repositori GitHub ↗]</a></span>
+            <span class="project-link-badge"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">[Kode GitHub ↗]</a> <span>•</span> <a href="https://lnkd.in/p/gkzRp5ky">[Slide Carousel ↗]</a></span>
         </div>
         <div class="project-tech">Teknologi: Python (SciPy Monte Carlo 1.000 Iterasi), Streamlit Web App, Power BI, SaaS Unit Economics</div>
         <ul class="project-bullet-list">

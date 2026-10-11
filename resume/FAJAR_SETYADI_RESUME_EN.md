@@ -36,7 +36,7 @@ LinkedIn: [linkedin.com/in/fajar-setyadi](https://www.linkedin.com/in/fajar-sety
 ## FEATURED ENGINEERING & ANALYTICS PROJECTS
 
 ### **1. Omnichannel Retail Supply Chain Analytics Engine**
-**Repository:** [github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine](https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine)  
+**Links:** [GitHub Repo ↗](https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine) • [LinkedIn Carousel ↗](https://lnkd.in/p/gmUye2pV)  
 *Tech Stack: PostgreSQL 15+, Database Architecture, Partitioning, Composite Indexing, Query Optimization, Financial Forensics*
 - **Database Architecture & Partitioning:** Engineered an enterprise relational database schema on **609,769 transaction rows** across 50 retail branches and 3 regional distribution centers, utilizing declarative range partitioning and relational integrity constraints.
 - **Query Optimization (98.3% Latency Drop):** Designed composite B-Tree indexes, partial indexes, and optimized query execution plans, slashing query latency from **8,420 ms down to 140 ms (98.3% speedup)** to eliminate lock contention on POS transaction servers.
@@ -44,14 +44,14 @@ LinkedIn: [linkedin.com/in/fajar-setyadi](https://www.linkedin.com/in/fajar-sety
 - **Customer Lifecycle Analytics:** Built a 12-month cohort retention matrix identifying an 86% Month-2 drop-off, establishing a "Golden Re-engagement Window" on Days 14–21 to safeguard **Rp 4.5B** in customer lifetime value (LTV).
 
 ### **2. Multi-Branch Retail F&B Profitability & Root-Cause Optimization**
-**Repository:** [github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis](https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis)  
+**Links:** [GitHub Repo ↗](https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis) • [LinkedIn Carousel ↗](https://lnkd.in/p/gqEzfWWs)  
 *Tech Stack: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistical Z-Score Root-Cause, Executive Dashboard*
 - **End-to-End Operational Analysis:** Conducted comprehensive operational profitability audits across 18 retail restaurant branches, combining Python ETL pipelines with interactive Power BI dashboards to diagnose margin erosion across store tiers.
 - **Statistical Root-Cause Modeling:** Implemented statistical anomaly detection ($Z$-score distribution analysis) on food waste, labor cost ratios, and promo discounting, isolating the root drivers behind branch-level margin variances.
 - **Power BI Enterprise Modeling (PBIP):** Architected a Star Schema model with 30+ custom DAX measures for dynamic branch P&L comparisons, store clustering, and SKU-level contribution margins, delivering an estimated financial impact of **IDR 254M/year**.
 
 ### **3. Predictive Investment Feasibility & SaaS Unit Economics Modeling**
-**Repository:** [github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS](https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS)  
+**Links:** [GitHub Repo ↗](https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS) • [LinkedIn Carousel ↗](https://lnkd.in/p/gkzRp5ky)  
 *Tech Stack: Python (SciPy Monte Carlo 1,000 Runs), Streamlit App Simulator, Power BI, SaaS Unit Economics*
 - **SaaS Unit Economics Architecture:** Formulated predictive financial and commercial models evaluating Customer Acquisition Cost (CAC), Lifetime Value (LTV), Payback Period, Net Churn, and Cash Burn rates for an event-tech SaaS platform.
 - **Stochastic Risk Simulation (Monte Carlo):** Developed a Python simulation engine utilizing **SciPy** executing **1,000 Monte Carlo runs**, stress-testing revenue variability and quantifying 95% confidence intervals for investor break-even timelines.

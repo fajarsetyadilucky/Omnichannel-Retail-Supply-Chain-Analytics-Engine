@@ -36,7 +36,7 @@ LinkedIn: [linkedin.com/in/fajar-setyadi](https://www.linkedin.com/in/fajar-sety
 ## PROYEK UNGGULAN REKAYASA DATA & ANALITIKA BISNIS
 
 ### **1. Omnichannel Retail Supply Chain Analytics Engine**
-**Repositori:** [github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine](https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine)  
+**Tautan:** [Kode GitHub ↗](https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine) • [Slide Carousel ↗](https://lnkd.in/p/gmUye2pV)  
 *Teknologi: PostgreSQL 15+, Arsitektur Database, Partisi Tabel, Composite Indexing, Optimasi Kueri, Audit Forensik Finansial*
 - **Arsitektur Database & Partisi:** Merancang skema database relasional skala korporat pada **609.769 baris transaksi** dari 50 gerai ritel dan 3 gudang distribusi, menerapkan *declarative range partitioning* dan integritas referensial data.
 - **Optimasi Performa Kueri (Lonjakan 98,3%):** Mendesain strategi *composite B-Tree index* dan *partial index*, memangkas latensi eksekusi kueri analitik dari **8.420 ms menjadi 140 ms (efisiensi 98,3%)** untuk meniadakan perebutan kunci memori pada database kasir POS toko.
@@ -44,14 +44,14 @@ LinkedIn: [linkedin.com/in/fajar-setyadi](https://www.linkedin.com/in/fajar-sety
 - **Analisis Retensi Siklus Hidup Pelanggan:** Membangun matriks retensi kohort 12 bulan yang mendeteksi penurunan retensi 86% di bulan kedua, mengidentifikasi *Golden Re-engagement Window* pada hari ke-14 s/d 21 untuk mengamankan **Rp 4,5 Miliar** nilai *Customer Lifetime Value* (LTV).
 
 ### **2. Multi-Branch Retail F&B Profitability & Root-Cause Optimization**
-**Repositori:** [github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis](https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis)  
+**Tautan:** [Kode GitHub ↗](https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis) • [Slide Carousel ↗](https://lnkd.in/p/gqEzfWWs)  
 *Teknologi: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistik Root-Cause Z-Score, Dasbor Eksekutif*
 - **Audit Profitabilitas Multi-Cabang:** Menjalankan audit performa operasional menyeluruh pada 18 cabang restoran ritel F&B, mengintegrasikan alur ETL Python dengan dasbor analitik Power BI untuk mendiagnosis erosi margin laba antar-cabang.
 - **Pemodelan Akar Masalah Statistik:** Menerapkan uji statistik deteksi anomali (*Z-score distribution analysis*) pada metrik *food waste*, rasio beban tenaga kerja, dan potongan diskon promo untuk mengisolasi akar pemicu penurunan laba bersih cabang.
 - **Arsitektur Pemodelan Power BI (PBIP):** Membangun model *Star Schema* dengan 30+ ukuran DAX dinamis untuk komparasi P&L cabang, klasterisasi toko, dan kontribusi margin per SKU produk, menghasilkan estimasi pemulihan laba **Rp 254 Juta per tahun**.
 
 ### **3. Predictive Investment Feasibility & SaaS Unit Economics Modeling**
-**Repositori:** [github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS](https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS)  
+**Tautan:** [Kode GitHub ↗](https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS) • [Slide Carousel ↗](https://lnkd.in/p/gkzRp5ky)  
 *Teknologi: Python (SciPy Monte Carlo 1.000 Iterasi), Streamlit Web App, Power BI, SaaS Unit Economics*
 - **Arsitektur Pemodelan Finansial SaaS:** Merumuskan model proyeksi komersial untuk mengevaluasi *Customer Acquisition Cost* (CAC), *Lifetime Value* (LTV), *Payback Period*, *Net Churn*, dan tingkat pembakaran kas (*burn rate*) platform SaaS event-tech.
 - **Simulasi Risiko Stokastik Monte Carlo:** Membangun mesin simulasi berbasis Python (**SciPy**) dengan **1.000 iterasi Monte Carlo**, menguji ketahanan variabilitas pendapatan dan mengukur selang kepercayaan 95% untuk titik impas (*break-even*) investor.
