@@ -470,8 +470,11 @@ print(f"Saved: {html_id_path}")
 pdf_en_path = resume_dir / "FAJAR_SETYADI_RESUME_EN.pdf"
 pdf_id_path = resume_dir / "FAJAR_SETYADI_RESUME_ID.pdf"
 
-parent_en_path = project_parent_dir / "Fajar_Setyadi_Resume_EN.pdf"
-parent_id_path = project_parent_dir / "Fajar_Setyadi_Resume_ID.pdf"
+project_resume_dir = project_parent_dir / "Resume"
+project_resume_dir.mkdir(parents=True, exist_ok=True)
+
+parent_en_path = project_resume_dir / "Fajar_Setyadi_Resume_EN.pdf"
+parent_id_path = project_resume_dir / "Fajar_Setyadi_Resume_ID.pdf"
 
 # Render EN PDF
 print("Rendering English PDF...")
@@ -484,6 +487,9 @@ subprocess.run([
     str(html_en_path)
 ], check=True)
 shutil.copy2(pdf_en_path, parent_en_path)
+shutil.copy2(html_en_path, project_resume_dir / "fajar_setyadi_resume_en.html")
+if (resume_dir / "FAJAR_SETYADI_RESUME_EN.md").exists():
+    shutil.copy2(resume_dir / "FAJAR_SETYADI_RESUME_EN.md", project_resume_dir / "Fajar_Setyadi_Resume_EN.md")
 print(f"SUCCESS: {pdf_en_path.name} -> Copied to {parent_en_path}")
 
 # Render ID PDF
@@ -497,6 +503,9 @@ subprocess.run([
     str(html_id_path)
 ], check=True)
 shutil.copy2(pdf_id_path, parent_id_path)
+shutil.copy2(html_id_path, project_resume_dir / "fajar_setyadi_resume_id.html")
+if (resume_dir / "FAJAR_SETYADI_RESUME_ID.md").exists():
+    shutil.copy2(resume_dir / "FAJAR_SETYADI_RESUME_ID.md", project_resume_dir / "Fajar_Setyadi_Resume_ID.md")
 print(f"SUCCESS: {pdf_id_path.name} -> Copied to {parent_id_path}")
 
-print("ALL BALANCED RESUME EDITIONS GENERATED SUCCESSFULLY!")
+print("ALL BALANCED RESUME EDITIONS GENERATED SUCCESSFULLY IN PROJECT RESUME FOLDER!")
