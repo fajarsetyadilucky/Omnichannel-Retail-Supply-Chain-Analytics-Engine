@@ -17,3 +17,8 @@ reports/** linguist-documentation=true
 scripts/** linguist-detectable=false
 scripts/** linguist-vendored=true
 *.py linguist-detectable=false
+
+# 4. Tandai resume dan aset dokumentasi
+resume/** linguist-detectable=false
+resume/** linguist-documentation=true
+resume/** linguist-vendored=true
