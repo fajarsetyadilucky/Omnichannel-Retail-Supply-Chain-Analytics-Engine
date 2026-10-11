@@ -1,23 +1,17 @@
 import subprocess
+import shutil
 from pathlib import Path
 
 # Paths
 base_dir = Path(r"d:\BOOTCAMP BUSSINESS INTELEGENCE & DATA ANALYST\project\Portfolio Project 2 SQL\Omnichannel-Retail-Supply-Chain-Analytics-Engine")
 resume_dir = base_dir / "resume"
 resume_dir.mkdir(parents=True, exist_ok=True)
-
-html_file = resume_dir / "fajar_setyadi_resume_ats.html"
-pdf_file = resume_dir / "FAJAR_SETYADI_RESUME_ENTERPRISE_ATS.pdf"
-project_parent_pdf = Path(r"d:\BOOTCAMP BUSSINESS INTELEGENCE & DATA ANALYST\project\Fajar_Setyadi_Resume_Enterprise_ATS.pdf")
+project_parent_dir = Path(r"d:\BOOTCAMP BUSSINESS INTELEGENCE & DATA ANALYST\project")
 
 chrome_bin = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-html_content = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Fajar Setyadi - Data Analyst & Business Intelligence Resume</title>
-<style>
+# Common Clean CSS Template
+css_style = """
     @page {
         size: A4 portrait;
         margin: 12mm 15mm 12mm 15mm;
@@ -142,9 +136,6 @@ html_content = """<!DOCTYPE html>
     ul.bullet-list li strong {
         color: #0f172a;
     }
-    .edu-item, .cert-item {
-        margin-bottom: 4px;
-    }
     .edu-degree {
         font-size: 10pt;
         font-weight: 700;
@@ -154,15 +145,20 @@ html_content = """<!DOCTYPE html>
         font-size: 9.5pt;
         color: #334155;
     }
-    .cert-list {
-        font-size: 9.5pt;
-        color: #1e293b;
-        padding-left: 17px;
-    }
     .projects-header {
         page-break-before: always;
     }
-</style>
+"""
+
+# ==========================================
+# 1. ENGLISH RESUME HTML
+# ==========================================
+html_en = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fajar Setyadi - Data Analyst &amp; Business Intelligence Resume</title>
+<style>{css_style}</style>
 </head>
 <body>
 
@@ -182,7 +178,7 @@ html_content = """<!DOCTYPE html>
     <!-- PROFESSIONAL SUMMARY -->
     <div class="section-title">PROFESSIONAL SUMMARY</div>
     <p class="summary-text">
-        Results-driven <strong>Data Analyst &amp; Business Intelligence Analyst</strong> with <strong>5+ years of experience</strong> turning large-scale transactional and financial datasets into high-impact executive dashboards and automated analytical engines. Proven track record in regional government financial management (<strong>BPKAD</strong>), consolidating multi-source budgetary and asset records across <strong>26 regional units</strong> and optimizing fiscal reporting turnaround by <strong>75%</strong>. Deep technical expertise in <strong>PostgreSQL 15+</strong> (advanced SQL, declarative partitioning, composite indexing, and 98.3% query optimization), <strong>Power BI</strong> (Star Schema modeling, advanced DAX, and executive storytelling), and <strong>Python</strong> (Pandas, cohort analysis, and statistical testing). Adept at bridging technical data engineering with commercial C-level strategy to identify revenue leakages, optimize unit economics, and drive data-backed decision-making.
+        Results-driven <strong>Data Analyst &amp; Business Intelligence Analyst</strong> with <strong>5+ years of experience</strong> transforming large-scale transactional and financial datasets into high-impact executive dashboards and automated analytical engines. Proven track record in regional government financial management (<strong>BPKAD</strong>), consolidating multi-source budgetary and asset records across <strong>26 regional units</strong> and optimizing fiscal reporting turnaround by <strong>75%</strong>. Technical mastery across <strong>PostgreSQL 15+</strong> (advanced SQL, declarative partitioning, composite indexing, and 98.3% query optimization), <strong>Power BI</strong> (Star Schema modeling, advanced DAX, and executive storytelling), and <strong>Python</strong> (Pandas, SciPy Monte Carlo simulation, statistical hypothesis testing). Adept at bridging technical data engineering with commercial C-level strategy to identify revenue leakages, optimize unit economics, and drive data-backed decision-making.
     </p>
 
     <!-- CORE TECHNICAL SKILLS -->
@@ -191,13 +187,13 @@ html_content = """<!DOCTYPE html>
         <strong>Databases &amp; Query Engines:</strong> PostgreSQL 15+, SQL (Advanced CTEs, Window Functions, Declarative Partitioning, Composite &amp; Partial Indexing, Query Plan Optimization / EXPLAIN ANALYZE, DDL/DML, Constraints, Foreign Keys)
     </div>
     <div class="skills-category">
-        <strong>Business Intelligence &amp; Modeling:</strong> Power BI, DAX (Time Intelligence, Iterators, Custom Measures, Cumulative Aggregations), Star Schema &amp; Dimensional Modeling (Kimball), Power Query (M), Interactive Dashboards, KPI Tracking
+        <strong>Business Intelligence &amp; Modeling:</strong> Power BI (Desktop PBIP), DAX (Time Intelligence, Iterators, Custom Measures, Cumulative Aggregations), Star Schema &amp; Dimensional Modeling (Kimball), Power Query (M), Interactive Dashboards, KPI Tracking
     </div>
     <div class="skills-category">
-        <strong>Programming &amp; Analytics:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), Advanced Microsoft Excel / Google Sheets (PivotTables, XLOOKUP, Dynamic Arrays, Power Pivot), Statistical Testing (A/B Testing), Cohort Retention Analysis
+        <strong>Programming &amp; Analytics:</strong> Python (Pandas, NumPy, SciPy, Matplotlib, Seaborn), Advanced Microsoft Excel / Google Sheets (PivotTables, XLOOKUP, Dynamic Arrays, Power Pivot), Statistical Hypothesis Testing (Z-Score, A/B Testing), Monte Carlo Simulation
     </div>
     <div class="skills-category">
-        <strong>Domain &amp; Methodologies:</strong> Financial Reconciliation, Unit Economics, Margin Variance Analysis, Supply Chain &amp; Inventory Analytics, SLA Dispute Auditing, Data Governance, Quality Control &amp; Pipeline Automation
+        <strong>Domain &amp; Methodologies:</strong> Financial Reconciliation, Unit Economics (LTV, CAC, Payback), Margin Variance Analysis, Supply Chain &amp; Inventory Analytics, SLA Dispute Auditing, Data Governance &amp; Pipeline Automation
     </div>
 
     <!-- PROFESSIONAL EXPERIENCE -->
@@ -238,28 +234,28 @@ html_content = """<!DOCTYPE html>
     <!-- Project 2 -->
     <div class="project-item">
         <div class="item-header">
-            <span class="project-title">2. Enterprise Commercial BI &amp; Executive Performance Dashboard</span>
-            <span class="date-location"><a href="https://github.com/fajarsetyadilucky">github.com/fajarsetyadilucky</a></span>
+            <span class="project-title">2. Multi-Branch Retail F&amp;B Profitability &amp; Root-Cause Optimization</span>
+            <span class="date-location"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">github.com/.../Retail-Branch-Profitability-Analysis</a></span>
         </div>
-        <div class="project-tech">Tech Stack: Power BI, Advanced DAX, Star Schema Modeling, Power Query, Dimensional Modeling (Kimball)</div>
+        <div class="project-tech">Tech Stack: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistical Z-Score Root-Cause, Executive Dashboard</div>
         <ul class="bullet-list">
-            <li><strong>Star Schema Data Modeling:</strong> Architected an optimized dimensional star schema (Kimball methodology) integrating 50,000+ multi-channel sales transactions, customer demographics, and product hierarchies.</li>
-            <li><strong>Advanced DAX &amp; Metrics Engineering:</strong> Programmed 25+ dynamic DAX measures including Time Intelligence (MoM, YoY growth, YTD), rolling 90-day moving averages, and cross-channel margin contribution variances.</li>
-            <li><strong>Executive UI/UX &amp; Drill-Through:</strong> Built a multi-page interactive executive interface featuring granular drill-through paths (Region &rarr; Store &rarr; SKU), dynamic KPI status indicators, and Row-Level Security (RLS) for multi-tiered management access.</li>
+            <li><strong>End-to-End Operational Analysis:</strong> Conducted comprehensive operational profitability audits across 18 retail restaurant branches, combining Python ETL pipelines with interactive Power BI dashboards to diagnose margin erosion across store tiers.</li>
+            <li><strong>Statistical Root-Cause Modeling:</strong> Implemented statistical anomaly detection (Z-score distribution analysis) on food waste, labor cost ratios, and promo discounting, isolating the root drivers behind branch-level margin variances.</li>
+            <li><strong>Power BI Enterprise Modeling (PBIP):</strong> Architected a Star Schema model with 30+ custom DAX measures for dynamic branch P&amp;L comparisons, store clustering, and SKU-level contribution margins, delivering an estimated financial impact of <strong>IDR 254M/year</strong>.</li>
         </ul>
     </div>
 
     <!-- Project 3 -->
     <div class="project-item">
         <div class="item-header">
-            <span class="project-title">3. Customer Lifecycle &amp; Behavioral Analytics Engine</span>
-            <span class="date-location"><a href="https://github.com/fajarsetyadilucky">github.com/fajarsetyadilucky</a></span>
+            <span class="project-title">3. Predictive Investment Feasibility &amp; SaaS Unit Economics Modeling</span>
+            <span class="date-location"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">github.com/.../Portfolio_Feasibility_EventPhoto_SaaS</a></span>
         </div>
-        <div class="project-tech">Tech Stack: Python (Pandas, NumPy, Seaborn), Statistical Hypothesis Testing, RFM Segmentation, Cohort Modeling</div>
+        <div class="project-tech">Tech Stack: Python (SciPy Monte Carlo 1,000 Runs), Streamlit App Simulator, Power BI, SaaS Unit Economics</div>
         <ul class="bullet-list">
-            <li><strong>Hypothesis &amp; A/B Testing:</strong> Conducted end-to-end statistical hypothesis testing (t-test, Chi-square) on multi-variant customer engagement experiments, determining statistically significant conversion drivers (p &lt; 0.05) to optimize digital marketing spend.</li>
-            <li><strong>RFM Customer Segmentation:</strong> Implemented RFM (Recency, Frequency, Monetary) clustering and lifetime value (LTV) models using <strong>Python (Pandas, Seaborn)</strong>, segmenting users into targeted retention and win-back cohorts.</li>
-            <li><strong>Automated Data Cleaning Pipeline:</strong> Developed modular Python scripts for data validation, handling null distributions, anomaly detection, and standardizing product taxonomic hierarchies for enterprise BI consumption.</li>
+            <li><strong>SaaS Unit Economics Architecture:</strong> Formulated predictive financial and commercial models evaluating Customer Acquisition Cost (CAC), Lifetime Value (LTV), Payback Period, Net Churn, and Cash Burn rates for an event-tech SaaS platform.</li>
+            <li><strong>Stochastic Risk Simulation (Monte Carlo):</strong> Developed a Python simulation engine utilizing <strong>SciPy</strong> executing <strong>1,000 Monte Carlo runs</strong>, stress-testing revenue variability and quantifying 95% confidence intervals for investor break-even timelines.</li>
+            <li><strong>Dual-Layer Analytics UI:</strong> Deployed an interactive Streamlit web simulator for scenario stress-testing and an executive Power BI investment scorecard, delivering institutional-grade decision support for venture capital stakeholders.</li>
         </ul>
     </div>
 
@@ -289,25 +285,181 @@ html_content = """<!DOCTYPE html>
 </html>
 """
 
-# Save HTML
-html_file.write_text(html_content, encoding="utf-8")
-print(f"HTML resume saved: {html_file}")
+# ==========================================
+# 2. INDONESIAN RESUME HTML
+# ==========================================
+html_id = f"""<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Fajar Setyadi - Resume Data Analyst &amp; Business Intelligence</title>
+<style>{css_style}</style>
+</head>
+<body>
 
-# Render to PDF via Chrome headless
-cmd = [
+    <!-- HEADER -->
+    <div class="header-container">
+        <h1 class="candidate-name">FAJAR SETYADI</h1>
+        <div class="candidate-title">Data Analyst | Business Intelligence Analyst</div>
+        <div class="contact-info">
+            Jakarta Selatan, Indonesia <span>•</span>
+            <a href="tel:+6289630527099">+62 896-3052-7099</a> <span>•</span>
+            <a href="mailto:Fajarsetyadilucky@gmail.com">Fajarsetyadilucky@gmail.com</a> <span>•</span>
+            <a href="https://linkedin.com/in/fajar-setyadi">linkedin.com/in/fajar-setyadi</a> <span>•</span>
+            <a href="https://github.com/fajarsetyadilucky">github.com/fajarsetyadilucky</a>
+        </div>
+    </div>
+
+    <!-- RINGKASAN PROFESIONAL -->
+    <div class="section-title">RINGKASAN PROFESIONAL</div>
+    <p class="summary-text">
+        <strong>Data Analyst &amp; Business Intelligence Analyst</strong> berorientasi hasil dengan <strong>5+ tahun pengalaman kerja profesional</strong> dalam mengolah data transaksional dan finansial skala besar menjadi mesin analitik otomatis dan dasbor eksekutif strategis. Memiliki rekam jejak teruji pada instansi pengelola keuangan daerah (<strong>BPKAD</strong>), mengonsolidasikan data anggaran dan aset lintas <strong>26 unit kerja operasional (OPD)</strong> serta mempercepat efisiensi siklus pelaporan hingga <strong>75%</strong>. Memiliki keahlian mendalam pada <strong>PostgreSQL 15+</strong> (SQL tingkat lanjut, <em>declarative partitioning</em>, <em>composite indexing</em>, dan optimasi kueri 98,3%), <strong>Power BI</strong> (<em>Star Schema modeling</em>, formula DAX lanjutan, dan <em>executive storytelling</em>), serta <strong>Python</strong> (Pandas, simulasi Monte Carlo SciPy, dan pengujian hipotesis statistik). Terbukti piawai menjembatani rekayasa teknis database dengan strategi komersial level direksi untuk mengidentifikasi kebocoran margin, mengoptimalkan <em>unit economics</em>, dan mendorong pengambilan keputusan berbasis data.
+    </p>
+
+    <!-- KEAHLIAN TEKNIS UTAMA -->
+    <div class="section-title">KEAHLIAN TEKNIS UTAMA</div>
+    <div class="skills-category">
+        <strong>Database &amp; Mesin Kueri:</strong> PostgreSQL 15+, SQL (CTEs Lanjutan, Window Functions, Declarative Partitioning, Composite &amp; Partial Indexing, Optimasi Eksekusi Kueri / EXPLAIN ANALYZE, DDL/DML, Integritas Relasional &amp; Constraints)
+    </div>
+    <div class="skills-category">
+        <strong>Business Intelligence &amp; Pemodelan:</strong> Power BI (Desktop PBIP), DAX (Time Intelligence, Iterators, Custom Measures, Cumulative Aggregations), Star Schema &amp; Dimensional Modeling (Kimball), Power Query (M), Dasbor Interaktif, Pelacakan KPI
+    </div>
+    <div class="skills-category">
+        <strong>Pemrograman &amp; Analitika Statistik:</strong> Python (Pandas, NumPy, SciPy, Matplotlib, Seaborn), Advanced Microsoft Excel / Google Sheets (PivotTables, XLOOKUP, Dynamic Arrays, Power Pivot), Pengujian Hipotesis Statistik (Z-Score, A/B Testing), Simulasi Stokastik Monte Carlo
+    </div>
+    <div class="skills-category">
+        <strong>Domain Bisnis &amp; Metodologi:</strong> Rekonsiliasi Finansial, Unit Economics (LTV, CAC, Payback Period), Analisis Varians Margin, Supply Chain &amp; Inventory Analytics, Audit Sengketa SLA Vendor, Tata Kelola Data &amp; Otomatisasi Alur Kerja
+    </div>
+
+    <!-- PENGALAMAN KERJA PROFESIONAL -->
+    <div class="section-title">PENGALAMAN KERJA PROFESIONAL</div>
+    <div class="experience-item">
+        <div class="item-header">
+            <span class="company-name">Badan Pengelola Keuangan dan Aset Daerah (BPKAD) Kabupaten Lampung Tengah</span>
+            <span class="date-location">2020 – 2025</span>
+        </div>
+        <div class="job-title">Data &amp; Financial Reporting Analyst <span style="font-weight: normal; font-size: 8.8pt; color: #64748b;">(Instansi Pengelola Keuangan dan Aset Pemerintah Daerah)</span></div>
+        <ul class="bullet-list">
+            <li><strong>Konsolidasi Data Finansial:</strong> Mengonsolidasi, membersihkan, dan mengaudit data multi-sumber anggaran dan penilaian aset lintas <strong>26 Unit Pelaksana Daerah (OPD)</strong>, menjaga 100% integritas data dan kepatuhan regulasi tata kelola APBD.</li>
+            <li><strong>Otomatisasi Alur Pelaporan:</strong> Merancang alur kerja pelaporan otomatis dan dasbor interaktif menggunakan <strong>Power BI</strong> dan <strong>Excel Lanjutan</strong>, memangkas siklus pelaporan bulanan sebesar <strong>75%</strong> (dari 5 hari kerja menjadi di bawah 4 jam) sekaligus mengeliminasi bottleneck input manual.</li>
+            <li><strong>Audit Forensik Selisih Anggaran:</strong> Menjalankan analisis varians dan pelacakan diskrepansi atas realisasi belanja daerah bernilai ratusan miliar Rupiah, mengidentifikasi anomali anggaran dan mengamankan alokasi fiskal daerah.</li>
+            <li><strong>Standarisasi Kualitas Data:</strong> Membangun rutinitas validasi otomatis dan rekonsiliasi data multi-tabel, menekan tingkat kesalahan dan diskrepansi pelaporan lintas instansi sebesar <strong>90%</strong>.</li>
+            <li><strong>Komunikasi Pemangku Kepentingan:</strong> Menyusun dan mempresentasikan laporan ringkasan eksekutif fiskal kepada jajaran pimpinan dinas dan tim teknis, menerjemahkan data keuangan multi-tabel yang kompleks menjadi rekomendasi kebijakan dan alokasi sumber daya yang konkret.</li>
+        </ul>
+    </div>
+
+    <!-- PROYEK UNGGULAN -->
+    <div class="section-title projects-header">PROYEK UNGGULAN REKAYASA DATA &amp; ANALITIKA BISNIS</div>
+
+    <!-- Proyek 1 -->
+    <div class="project-item">
+        <div class="item-header">
+            <span class="project-title">1. Omnichannel Retail Supply Chain Analytics Engine</span>
+            <span class="date-location"><a href="https://github.com/fajarsetyadilucky/Omnichannel-Retail-Supply-Chain-Analytics-Engine">github.com/.../Omnichannel-Retail-Supply-Chain-Analytics-Engine</a></span>
+        </div>
+        <div class="project-tech">Teknologi: PostgreSQL 15+, Arsitektur Database, Partisi Tabel, Composite Indexing, Optimasi Kueri, Audit Forensik Finansial</div>
+        <ul class="bullet-list">
+            <li><strong>Arsitektur Database &amp; Partisi:</strong> Merancang skema database relasional skala korporat pada <strong>609.769 baris transaksi</strong> dari 50 gerai ritel dan 3 gudang distribusi, menerapkan <em>declarative range partitioning</em> dan integritas referensial data.</li>
+            <li><strong>Optimasi Performa Kueri (Lonjakan 98,3%):</strong> Mendesain strategi <em>composite B-Tree index</em> dan <em>partial index</em>, memangkas latensi eksekusi kueri analitik dari <strong>8.420 ms menjadi 140 ms (efisiensi 98,3%)</strong> untuk meniadakan perebutan kunci memori pada database kasir POS toko.</li>
+            <li><strong>Pemulihan Margin Finansial (Dampak Rp 18,3 Miliar):</strong> Merumuskan kueri SQL lanjutan untuk memetakan kebocoran laba operasional: memitigasi <strong>Rp 5,7 Miliar</strong> potensi kehilangan omzet akibat <em>Ghost Stockout</em> menggunakan Window Function <code>LAG()</code>, merekonsiliasi piutang denda keterlambatan vendor FMCG sebesar <strong>Rp 3,2 Miliar</strong> via audit trail SLA berimbang, dan memulihkan margin layanan kilat sebesar <strong>Rp 4,9 Miliar</strong> melalui kenaikan batas belanja Rp 250rb yang dipadu strategi <em>cross-selling</em>.</li>
+            <li><strong>Analisis Retensi Siklus Hidup Pelanggan:</strong> Membangun matriks retensi kohort 12 bulan yang mendeteksi penurunan retensi 86% di bulan kedua, mengidentifikasi <em>Golden Re-engagement Window</em> pada hari ke-14 s/d 21 untuk mengamankan <strong>Rp 4,5 Miliar</strong> nilai <em>Customer Lifetime Value</em> (LTV).</li>
+        </ul>
+    </div>
+
+    <!-- Proyek 2 -->
+    <div class="project-item">
+        <div class="item-header">
+            <span class="project-title">2. Multi-Branch Retail F&amp;B Profitability &amp; Root-Cause Optimization</span>
+            <span class="date-location"><a href="https://github.com/fajarsetyadilucky/Retail-Branch-Profitability-Analysis">github.com/.../Retail-Branch-Profitability-Analysis</a></span>
+        </div>
+        <div class="project-tech">Teknologi: Power BI (Desktop PBIP), Python (Pandas, NumPy, SciPy), Statistik Root-Cause Z-Score, Dasbor Eksekutif</div>
+        <ul class="bullet-list">
+            <li><strong>Audit Profitabilitas Multi-Cabang:</strong> Menjalankan audit performa operasional menyeluruh pada 18 cabang restoran ritel F&amp;B, mengintegrasikan alur ETL Python dengan dasbor analitik Power BI untuk mendiagnosis erosi margin laba antar-cabang.</li>
+            <li><strong>Pemodelan Akar Masalah Statistik:</strong> Menerapkan uji statistik deteksi anomali (<em>Z-score distribution analysis</em>) pada metrik <em>food waste</em>, rasio beban tenaga kerja, dan potongan diskon promo untuk mengisolasi akar pemicu penurunan laba bersih cabang.</li>
+            <li><strong>Arsitektur Pemodelan Power BI (PBIP):</strong> Membangun model <em>Star Schema</em> dengan 30+ ukuran DAX dinamis untuk komparasi P&amp;L cabang, klasterisasi toko, dan kontribusi margin per SKU produk, menghasilkan estimasi pemulihan laba <strong>Rp 254 Juta per tahun</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- Proyek 3 -->
+    <div class="project-item">
+        <div class="item-header">
+            <span class="project-title">3. Predictive Investment Feasibility &amp; SaaS Unit Economics Modeling</span>
+            <span class="date-location"><a href="https://github.com/fajarsetyadilucky/Portfolio_Feasibility_EventPhoto_SaaS">github.com/.../Portfolio_Feasibility_EventPhoto_SaaS</a></span>
+        </div>
+        <div class="project-tech">Teknologi: Python (SciPy Monte Carlo 1.000 Iterasi), Streamlit Web App, Power BI, SaaS Unit Economics</div>
+        <ul class="bullet-list">
+            <li><strong>Arsitektur Pemodelan Finansial SaaS:</strong> Merumuskan model proyeksi komersial untuk mengevaluasi <em>Customer Acquisition Cost</em> (CAC), <em>Lifetime Value</em> (LTV), <em>Payback Period</em>, <em>Net Churn</em>, dan tingkat pembakaran kas (<em>burn rate</em>) platform SaaS event-tech.</li>
+            <li><strong>Simulasi Risiko Stokastik Monte Carlo:</strong> Membangun mesin simulasi berbasis Python (<strong>SciPy</strong>) dengan <strong>1.000 iterasi Monte Carlo</strong>, menguji ketahanan variabilitas pendapatan dan mengukur selang kepercayaan 95% untuk titik impas (<em>break-even</em>) investor.</li>
+            <li><strong>Antarmuka Dasbor Dua Lapisan:</strong> Mengembangkan simulator skenario web interaktif via Streamlit dan <em>scorecard</em> investasi Power BI, menyajikan instrumen pendukung keputusan risiko-pengembalian tingkat institusional bagi pemodal ventura.</li>
+        </ul>
+    </div>
+
+    <!-- PENDIDIKAN & SERTIFIKASI -->
+    <div class="section-title">PENDIDIKAN &amp; SERTIFIKASI</div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+        <div>
+            <span class="edu-degree">Sarjana Komputer (S.Kom) — Teknik Informatika</span><br>
+            <span class="edu-inst">Institut Informatika &amp; Bisnis (IIB) Darmajaya, Lampung</span>
+        </div>
+        <div class="date-location" style="text-align: right;">
+            2015 – 2020
+        </div>
+    </div>
+    <div style="font-size: 9.3pt; color: #475569; margin-bottom: 6px;">
+        Mata Kuliah Relevan: Sistem Basis Data, Algoritma &amp; Struktur Data, Rekayasa Perangkat Lunak, Pemrograman Berorientasi Objek, Analisis Statistik
+    </div>
+
+    <div style="font-size: 9.5pt; color: #1e293b;">
+        <strong>Sertifikasi Profesional:</strong> 
+        Business Intelligence &amp; Data Analytics Specialist (Digital Skola) <span>•</span> 
+        Advanced Excel Mastery for Business &amp; Data Analysis (Digital Skola) <span>•</span> 
+        MTA: Software &amp; Application Development Fundamentals (Microsoft)
+    </div>
+
+</body>
+</html>
+"""
+
+# Save HTML files
+html_en_path = resume_dir / "fajar_setyadi_resume_en.html"
+html_id_path = resume_dir / "fajar_setyadi_resume_id.html"
+
+html_en_path.write_text(html_en, encoding="utf-8")
+html_id_path.write_text(html_id, encoding="utf-8")
+print(f"Saved: {html_en_path}")
+print(f"Saved: {html_id_path}")
+
+# PDF output paths
+pdf_en_path = resume_dir / "FAJAR_SETYADI_RESUME_EN.pdf"
+pdf_id_path = resume_dir / "FAJAR_SETYADI_RESUME_ID.pdf"
+
+parent_en_path = project_parent_dir / "Fajar_Setyadi_Resume_EN.pdf"
+parent_id_path = project_parent_dir / "Fajar_Setyadi_Resume_ID.pdf"
+
+# Render EN PDF
+print("Rendering English PDF...")
+subprocess.run([
     chrome_bin,
     "--headless=new",
     "--disable-gpu",
     "--no-pdf-header-footer",
-    f"--print-to-pdf={pdf_file}",
-    str(html_file)
-]
+    f"--print-to-pdf={pdf_en_path}",
+    str(html_en_path)
+], check=True)
+shutil.copy2(pdf_en_path, parent_en_path)
+print(f"SUCCESS: {pdf_en_path.name} -> Copied to {parent_en_path}")
 
-print("Rendering PDF via Chrome headless...")
-subprocess.run(cmd, check=True)
-print(f"PDF successfully rendered: {pdf_file} (Size: {pdf_file.stat().st_size / 1024:.2f} KB)")
+# Render ID PDF
+print("Rendering Indonesian PDF...")
+subprocess.run([
+    chrome_bin,
+    "--headless=new",
+    "--disable-gpu",
+    "--no-pdf-header-footer",
+    f"--print-to-pdf={pdf_id_path}",
+    str(html_id_path)
+], check=True)
+shutil.copy2(pdf_id_path, parent_id_path)
+print(f"SUCCESS: {pdf_id_path.name} -> Copied to {parent_id_path}")
 
-# Also copy to project parent directory so user can find it easily
-import shutil
-shutil.copy2(pdf_file, project_parent_pdf)
-print(f"Copied to parent project directory: {project_parent_pdf}")
+print("ALL RESUME EDITIONS GENERATED SUCCESSFULLY!")
