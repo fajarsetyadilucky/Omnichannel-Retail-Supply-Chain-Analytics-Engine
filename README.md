@@ -28,6 +28,34 @@ Berbeda dari proyek SQL akademik sederhana yang hanya menggunakan query agregasi
 
 ---
 
+## 📊 Executive Visual Analytics Showcase (Slide Deck & Key Findings)
+
+> Visualisasi analitik tingkat C-Level yang merangkum temuan audit rantai pasok, kebocoran margin Rp 18,3 M, dan optimasi performa database dari 609.769 baris data riil:
+
+<p align="center">
+  <img src="reports/carousel_slides/slide_01.png" width="49%" alt="The Omnichannel Paradox - Cover" />
+  <img src="reports/carousel_slides/slide_02.png" width="49%" alt="Margin Waterfall Analysis" />
+</p>
+
+<p align="center">
+  <img src="reports/carousel_slides/slide_04.png" width="49%" alt="Ghost Stockout Detection via Window Functions" />
+  <img src="reports/carousel_slides/slide_05.png" width="49%" alt="SLA Vendor Audit Trail & Penalty Receivables" />
+</p>
+
+<p align="center">
+  <img src="reports/carousel_slides/slide_07.png" width="49%" alt="Customer Lifecycle & Cohort Retention Matrix" />
+  <img src="reports/carousel_slides/slide_08.png" width="49%" alt="Database Performance Tuning Benchmark (180x Speedup)" />
+</p>
+
+<p align="center">
+  <img src="reports/carousel_slides/slide_09.png" width="49%" alt="90-Day Tactical Execution Roadmap" />
+  <img src="reports/carousel_slides/slide_06.png" width="49%" alt="Instant Delivery Subsidy vs Unit Economics" />
+</p>
+
+👉 **Dokumen Lengkap:** [LINKEDIN_CAROUSEL_OMNICHANNEL_SQL_ENGINE.pdf](reports/LINKEDIN_CAROUSEL_OMNICHANNEL_SQL_ENGINE.pdf) | [Laporan Eksekutif PDF](reports/EXECUTIVE_BUSINESS_REPORT.pdf)
+
+---
+
 ## 🏛️ System Relational Architecture (ERD Diagram)
 
 Arsitektur database dirancang dalam bentuk Normalisasi Bentuk Ketiga (3NF) guna menjamin konsistensi ACID (*Atomicity, Consistency, Isolation, Durability*):
